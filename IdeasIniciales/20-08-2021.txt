@@ -1,0 +1,47 @@
+BRAINSTORMING 20/08
+
+IDEASSS
+
+##### Géneros
+Acción
+Disparos (lanzar cosas en realidad)
+Agilidad mental / Puzzle (quizás)
+
+
+##### Estética
+ideas locas:
+
+- que se sienta una conexión con el personaje (SHIBA :D)
+
+##### Mećanicas, Innovación
+ideas locas:
+
+- que el personaje modifique su entorno
+- poder colocar trampas en cada nivel para enemigo/s (uno también debe pasarlas)
+- tiempo máximo para completar niveles
+- que el personaje reciba ayuda externa de manera random (no necesaria para pasar los niveles)
+- aumentar dificultad en cada nivel (menos trampas, más trampas pero obligación usarlas, enemigo maś brígido, ...)
+- [que no sea el clásico movimiento con flechas (muchos inputs)] si es que lo vendemos con esta idea
+- que el personaje se controle de manera random durante el juego (perder el control)
+
+##### HISTORIA 
+- personaje: shiba muy bacansito
+- llevarle comida al amo/a o se muere :frowning:
+- le dan cariño al perrito y recibe boost de energia/tiempo/loquesea :smile:
+
+enemigos:
+- perrera
+- funeraria xd
+- otros perros
+- gatos
+
+
+##### JUEGUITOS
+
+- pacman
+- geometry dash
+- flappy bird
+- duet
+- speedrunners
+- king of thieves
+- (ultimate chicken horse)
