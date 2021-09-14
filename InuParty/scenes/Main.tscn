@@ -1,14 +1,143 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/sky/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer01.png" type="Texture" id=1]
+[ext_resource path="res://sprites/sky/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer03.png" type="Texture" id=2]
+[ext_resource path="res://sprites/sky/Free DEMO Pixel Skies Background pack by Digital Moons/Parallax Pixel Skies 240x135px/Demo 01 Parallax Pixel Sky/demo01_PixelSky_layer02.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v1/house 1 blue.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v1/house 1 orange.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Free Trees/Free/Leafy/bushy.png" type="Texture" id=6]
+[ext_resource path="res://sprites/forest_tileset_lite/forest_tileset_lite/Sprites/Decor/Bush/bush_1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v1/house 1 green.png" type="Texture" id=8]
+[ext_resource path="res://sprites/forest_tileset_lite/forest_tileset_lite/Sprites/Decor/Rock/rock_1.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v2/House 2 Blue.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v2/house 2 purple.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Free Trees/Free/Pine/Pine.png" type="Texture" id=12]
+[ext_resource path="res://sprites/forest_tileset_lite/forest_tileset_lite/Sprites/Decor/Bush/bush_2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v2/house 2 red.png" type="Texture" id=14]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v3/house 3 blue.png" type="Texture" id=15]
+[ext_resource path="res://sprites/Street houses/Street houses/Houses/PNG Files/House v1/house 1 purple.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Free Trees/Free/Leafy/Bright Green Leaf.png" type="Texture" id=17]
 
 [node name="Main" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 1080, 0 )
 
 [node name="demo01_PixelSky_layer01" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-scale = Vector2( 3, 3 )
+scale = Vector2( 4.5, 4.5 )
 texture = ExtResource( 1 )
 centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+
+[node name="demo01_PixelSky_layer02" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2( 4.5, 4.5 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1080, 0 )
+
+[node name="demo01_PixelSky_layer03" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2( 4.5, 4.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxLayerHouses" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 0, 70 )
+scale = Vector2( 0.8, 0.8 )
+motion_scale = Vector2( 0.75, 1 )
+motion_mirroring = Vector2( 2300, 0 )
+
+[node name="house 2 red" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1510.58, 185.564 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="house 1 blue" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( -144.25, 200 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="house 2 purple" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 130.162, 185.54 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="House 2 Blue" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/house 2 purple"]
+position = Vector2( 1100.48, 109.425 )
+texture = ExtResource( 10 )
+
+[node name="house 1 orange" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 805.998, 200 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="house 1 purple" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/house 1 orange"]
+position = Vector2( 39.2835, 124.487 )
+texture = ExtResource( 16 )
+
+[node name="house 1 green" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/house 1 orange"]
+position = Vector2( -208.99, 0 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="house 3 blue" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1164.9, 225.47 )
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Pine" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 124.573, 276.505 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="bush_1" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1154.44, 532.794 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="bush_2" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/bush_1"]
+position = Vector2( 25.8864, 0.149872 )
+texture = ExtResource( 13 )
+
+[node name="rock_1" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/bush_1"]
+position = Vector2( 17.9265, 8.29608 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="bush_2" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1920.47, 532.794 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+
+[node name="bush_2" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/bush_2"]
+position = Vector2( 25.8864, 0.149872 )
+texture = ExtResource( 13 )
+
+[node name="rock_1" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses/bush_2"]
+position = Vector2( 17.9265, 8.29608 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="bushy" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1202.89, 453.632 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 6 )
+
+[node name="Bright Green Leaf" type="Sprite" parent="ParallaxBackground/ParallaxLayerHouses"]
+position = Vector2( 1936.17, 468.751 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 17 )
