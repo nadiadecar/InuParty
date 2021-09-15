@@ -167,18 +167,17 @@ graph_offset = Vector2( -343.2, 0 )
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 2.5, 2.5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -4.76837e-07, -8.34465e-07 )
-rotation = 1.5708
-scale = Vector2( 2.5, 2.5 )
-shape = SubResource( 1 )
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -3.2, -7.6 )
 scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 3 )
 hframes = 2
-frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.76837e-07, -8.34465e-07 )
+rotation = 1.5708
+scale = Vector2( 2.5, 2.5 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Idle = SubResource( 2 )
@@ -188,4 +187,5 @@ anims/Walk = SubResource( 4 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 14 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 15 )
