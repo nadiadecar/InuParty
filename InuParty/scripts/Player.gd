@@ -23,8 +23,8 @@ func _physics_process(delta) -> void:
 	
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
 	
-	if Input.is_action_just_pressed("jump"):
-		lineal_vel.y = -SPEED * 2
+	if on_floor and Input.is_action_just_pressed("jump"):
+		lineal_vel.y = -SPEED
 	
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right") and _facing_right:
 		_facing_right = false
@@ -44,4 +44,5 @@ func _physics_process(delta) -> void:
 			playback.travel("Walk")
 		if 300 <= abs(lineal_vel.x):
 			playback.travel("Run")
-	
+	else:
+			playback.travel("Jump")
