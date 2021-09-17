@@ -18,5 +18,5 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 90.6992, 615.877 )
+position = Vector2( 108.161, 639.688 )
 script = ExtResource( 1 )

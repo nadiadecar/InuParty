@@ -220,9 +220,8 @@ scale = Vector2( 2.5, 2.5 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -3.2, -7.6 )
 scale = Vector2( 2.5, 2.5 )
-texture = ExtResource( 1 )
-hframes = 3
-frame = 1
+texture = ExtResource( 3 )
+hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4.76837e-07, -8.34465e-07 )
@@ -239,4 +238,5 @@ anims/Walk = SubResource( 5 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 20 )
