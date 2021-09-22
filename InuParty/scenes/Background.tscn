@@ -341,7 +341,8 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 1080, 0 )
 
 [node name="demo01_PixelSky_layer01" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-scale = Vector2( 4.5, 4.5 )
+position = Vector2( 0, -128 )
+scale = Vector2( 4.5, 5.44815 )
 texture = ExtResource( 16 )
 centered = false
 
@@ -350,7 +351,8 @@ motion_scale = Vector2( 0.15, 1 )
 motion_mirroring = Vector2( 1080, 0 )
 
 [node name="demo01_PixelSky_layer02" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-scale = Vector2( 4.5, 4.5 )
+position = Vector2( 0, -40 )
+scale = Vector2( 4.5, 4.7963 )
 texture = ExtResource( 15 )
 centered = false
 
@@ -359,7 +361,8 @@ motion_scale = Vector2( 0.3, 1 )
 motion_mirroring = Vector2( 1080, 0 )
 
 [node name="demo01_PixelSky_layer03" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-scale = Vector2( 4.5, 4.5 )
+position = Vector2( 0, -152 )
+scale = Vector2( 4.5, 5.62593 )
 texture = ExtResource( 14 )
 centered = false
 
@@ -374,17 +377,14 @@ texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe"]
 position = Vector2( 48, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe/cerco_cafe2"]
 position = Vector2( 47.778, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe/cerco_cafe2/cerco_cafe2"]
 position = Vector2( 48, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco"]
@@ -394,17 +394,14 @@ texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe2"]
 position = Vector2( 48, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe2/cerco_cafe2"]
 position = Vector2( 47.778, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="cerco_cafe2" type="Sprite" parent="ParallaxBackground/cerco/cerco_cafe2/cerco_cafe2/cerco_cafe2"]
 position = Vector2( 48, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 25 )
 
 [node name="ParallaxLayerBackTrees" type="ParallaxLayer" parent="ParallaxBackground"]

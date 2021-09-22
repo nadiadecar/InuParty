@@ -19,9 +19,7 @@ position = Vector2( 563.684, 148.651 )
 script = ExtResource( 4 )
 
 [node name="bomb_obj" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 198.214, -134.974 )
 script = ExtResource( 6 )
 
 [node name="thor_obj" parent="." instance=ExtResource( 7 )]
-visible = false

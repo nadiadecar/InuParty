@@ -114,12 +114,12 @@ start_node = "Idle"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -3.2, -26.8 )
-scale = Vector2( 3, 3 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.76778, 29.5183 )
+position = Vector2( -8, 8 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
@@ -130,5 +130,4 @@ anims/Walk = SubResource( 3 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 9 )

@@ -201,7 +201,7 @@ animation = "Walk"
 
 [sub_resource type="AnimationNodeStateMachine" id=19]
 states/Idle/node = SubResource( 6 )
-states/Idle/position = Vector2( 99, 39 )
+states/Idle/position = Vector2( 100.333, 39 )
 states/Jump/node = SubResource( 7 )
 states/Jump/position = Vector2( 299, 144 )
 states/Run/node = SubResource( 8 )
@@ -219,15 +219,14 @@ scale = Vector2( 2.5, 2.5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -3.2, -7.6 )
-scale = Vector2( 2.5, 2.5 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 hframes = 2
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -4.76837e-07, -8.34465e-07 )
+position = Vector2( 8.81073e-13, -3.2 )
 rotation = 1.5708
-scale = Vector2( 2.5, 2.5 )
+scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -243,9 +242,8 @@ active = true
 parameters/playback = SubResource( 20 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -70 )
+position = Vector2( 0, -90 )
 current = true
 zoom = Vector2( 0.8, 0.8 )
 limit_left = -100
 limit_bottom = 1000
-smoothing_enabled = true
