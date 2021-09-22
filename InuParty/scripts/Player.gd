@@ -36,7 +36,6 @@ func _physics_process(delta) -> void:
 		
 		
 	# ANIMATIONS
-	print(lineal_vel.x)
 	if on_floor:
 		if abs(lineal_vel.x) <= 0:
 			playback.travel("Idle")
