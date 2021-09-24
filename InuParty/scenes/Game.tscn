@@ -19,7 +19,7 @@ position = Vector2( 647.816, -351.38 )
 script = ExtResource( 4 )
 
 [node name="bomb_obj" parent="." instance=ExtResource( 5 )]
-position = Vector2( 198.214, -134.974 )
+position = Vector2( 412.214, -402.974 )
 script = ExtResource( 6 )
 
 [node name="thor_obj" parent="." instance=ExtResource( 7 )]
