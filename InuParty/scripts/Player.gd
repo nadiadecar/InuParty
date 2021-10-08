@@ -49,6 +49,6 @@ func _physics_process(delta) -> void:
 	else:
 			playback.travel("Jump")
 
-func _on_cat_collision(body: KinematicBody2D):
+func _on_cat_collision(body):
 	if body.is_in_group("player"):
 		print("wiiiiii")
