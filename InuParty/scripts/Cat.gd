@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
-var SPEED = 300
-var ACCELERATION = 5
+var SPEED = 200
+var ACCELERATION = 1
 var GRAVITY = 400
 
 var _facing_right = true
@@ -14,5 +14,7 @@ func _ready() -> void:
 	get_node("AnimationPlayer")
 
 func _physics_process(delta) -> void:
-	pass
+	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
+	lineal_vel.x = move_toward(lineal_vel.x, SPEED, ACCELERATION)
 	
+

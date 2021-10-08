@@ -8,12 +8,16 @@ var GRAVITY = 400
 var _facing_right = true
 
 onready var playback = $AnimationTree.get("parameters/playback")
+onready var cat_collision = get_parent().get_node("Cat/Area2D")
 
 func _ready() -> void:
 	$AnimationTree.active = true
 	get_node("AnimationPlayer")
+	
+	cat_collision.connect("body_entered", self, "_on_cat_collision")
 
 func _physics_process(delta) -> void:
+	# MOVIMIENTO
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
 	lineal_vel.y += GRAVITY * delta
 	
@@ -34,7 +38,6 @@ func _physics_process(delta) -> void:
 		_facing_right = true
 		scale.x = -2.5
 		
-		
 	# ANIMATIONS
 	if on_floor:
 		if abs(lineal_vel.x) <= 0:
@@ -45,3 +48,7 @@ func _physics_process(delta) -> void:
 			playback.travel("Run")
 	else:
 			playback.travel("Jump")
+
+func _on_cat_collision(body: KinematicBody2D):
+	if body.is_in_group("player"):
+		print("wiiiiii")
