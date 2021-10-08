@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sprites/cat_walk.png" type="Texture" id=1]
 [ext_resource path="res://sprites/cat_idle.png" type="Texture" id=2]
@@ -110,9 +110,6 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 40.1137, 35.7903 )
-
 [node name="Cat" type="KinematicBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -134,9 +131,3 @@ anims/Walk = SubResource( 3 )
 tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -9.54593, 1.41421 )
-shape = SubResource( 10 )
