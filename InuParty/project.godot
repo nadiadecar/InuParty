@@ -12,7 +12,7 @@ config_version=4
 
 config/name="InuParty"
 run/main_scene="res://scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://others/shiba_inu_painted_by_atrieisan_d2uiqnr.jpg"
 
 [display]
 
