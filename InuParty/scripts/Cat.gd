@@ -26,4 +26,5 @@ func _physics_process(delta) -> void:
 	player_distance = abs(self.position.x - player.position.x)
 	print("distancia perro y gato: ", player_distance)
 	if (player_distance < NEAR_DISTANCE_THRESHOLD):
-		get_tree().change_scene("res://scenes/ui/win_menu.tscn")
+		pass
+		#get_tree().change_scene("res://scenes/ui/win_menu.tscn")
