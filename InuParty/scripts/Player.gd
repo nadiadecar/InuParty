@@ -26,7 +26,7 @@ func _physics_process(delta) -> void:
 	
 	if on_floor and Input.is_action_just_pressed("jump"):
 		lineal_vel.y = -SPEED
-		lineal_vel.x = max(0, lineal_vel.x - 250) # el perrito reduce su velocidad al saltar, se prioriza uso de objetos
+		lineal_vel.x = max(0, lineal_vel.x - 200) # el perrito reduce su velocidad al saltar, se prioriza uso de objetos
 	
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right") and _facing_right:
 		_facing_right = false

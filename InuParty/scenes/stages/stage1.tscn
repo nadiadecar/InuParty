@@ -26,16 +26,18 @@ position = Vector2( 78, 84 )
 script = ExtResource( 2 )
 
 [node name="water" parent="Game" instance=ExtResource( 9 )]
+position = Vector2( 577.414, -340.063 )
 
 [node name="Cat" parent="Game" instance=ExtResource( 3 )]
-position = Vector2( 647.816, -351.38 )
+position = Vector2( 817.414, -332.063 )
 script = ExtResource( 4 )
 
 [node name="bomb_obj" parent="Game" instance=ExtResource( 5 )]
-position = Vector2( 412.214, -402.974 )
+position = Vector2( 457.414, -356.063 )
 script = ExtResource( 6 )
 
 [node name="thor_obj" parent="Game" instance=ExtResource( 7 )]
+position = Vector2( 137.414, -332.063 )
 
 [node name="thunder" parent="Game" instance=ExtResource( 8 )]
 position = Vector2( 304, -360 )
