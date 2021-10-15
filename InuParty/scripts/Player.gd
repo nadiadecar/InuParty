@@ -7,6 +7,8 @@ var GRAVITY = 400
 
 var _facing_right = true
 
+var cat_plane = false
+
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func _ready() -> void:
@@ -46,3 +48,13 @@ func _physics_process(delta) -> void:
 			playback.travel("Run")
 	else:
 			playback.travel("Jump")
+
+
+func change_plane():
+	print("Cambiando plano")
+	cat_plane = not cat_plane
+	if cat_plane == true:
+		self.position.y = -315
+	else:
+		self.position.y = 100
+	

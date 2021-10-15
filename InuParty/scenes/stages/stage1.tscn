@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://scenes/obstacles/Wall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/Portal.gd" type="Script" id=13]
 
 [node name="Main" type="Node2D"]
 
@@ -20,15 +21,17 @@
 [node name="Game" type="Node2D" parent="."]
 position = Vector2( -1.41418, 444.063 )
 
-[node name="Player" parent="Game" instance=ExtResource( 1 )]
-position = Vector2( 78, 84 )
+[node name="Player" parent="Game" groups=[
+"player",
+] instance=ExtResource( 1 )]
+position = Vector2( 78, 100 )
 script = ExtResource( 2 )
 
 [node name="water" parent="Game" instance=ExtResource( 9 )]
 position = Vector2( 577.414, -340.063 )
 
 [node name="Cat" parent="Game" instance=ExtResource( 3 )]
-position = Vector2( 817.414, -332.063 )
+position = Vector2( 817.414, -315.063 )
 script = ExtResource( 4 )
 
 [node name="bomb_obj" parent="Game" instance=ExtResource( 5 )]
@@ -46,3 +49,4 @@ position = Vector2( 513.414, 59.9369 )
 
 [node name="portal" parent="Game" instance=ExtResource( 12 )]
 position = Vector2( 369.414, 35.9369 )
+script = ExtResource( 13 )
