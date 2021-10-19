@@ -1,11 +1,16 @@
-(Sprite Gato) https://www.deviantart.com/neoriceisgood/art/100-Cat-Sprites-804712407 - Neoriceisgood
-(Sprite Shiba) https://www.nexusmods.com/stardewvalley/mods/570 - Bouhm
-(Martillo) https://pixlr.com/stock/creator/stockunlimited - stockunlimited
+SELECT ?pokemon
+WHERE {
+    ?pokemon a ex:Pokemon; ?level a ex:LevelUp
+}
 
+SELECT REDUCED ?pokemon ?alternatePokemon
+    WHERE{
+        ?pokemon ex:alternateForm ?alternatePokemon.
+        ?pokemon ex:primaryType ?primaryType.
+        ?pokemon ex:secondaryType ?secondaryType. 
+        ?alternatePokemon ex:primaryType ?aPrimaryType.
+        ?alternatePokemon ex:secondaryType ?aSecondaryType.
 
-(Font) https://jdjimenez.itch.io/avenue-pixel - jdjimenez
+        FILTER(?primaryType = ?aPrimaryType || ?primaryType = ?aSecondaryType || ?secondaryType = ?aSecondaryType)
 
-(Shiba Painted) https://www.deviantart.com/atrieisan/art/Shiba-Inu-painted-172195191 - atrieisan
-
-(Portals) https://elthen.itch.io/2d-pixel-art-portal-sprites - Elthen
-
+    }

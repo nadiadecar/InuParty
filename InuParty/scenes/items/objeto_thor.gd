@@ -5,12 +5,6 @@ var SPEED = 300
 var ACCELERATION = 5
 var GRAVITY = 10
 
-onready var playback = $AnimationTree.get("parameters/playback")
-
-func _ready() -> void:
-	$AnimationTree.active = true
-	get_node("AnimationPlayer")
-
 
 func _physics_process(delta) -> void:
 	
@@ -21,14 +15,6 @@ func _physics_process(delta) -> void:
 	var target_vel = Input.get_action_strength("right_obj") - Input.get_action_strength("left_obj")
 	
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
-	
-	# ANIMATIONS
-	if Input.is_action_just_pressed("fast_fall"):
-		lineal_vel.x=0
-		lineal_vel.y += GRAVITY * 50
-		var velocity = Vector2.DOWN
-		var collision = move_and_collide(velocity * 200)
-		if collision:
-			playback.travel("Active")
-		
 
+	if Input.is_action_just_pressed("fast_fall"):
+		lineal_vel.y += GRAVITY * 50
