@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 16.0
-height = 28.0
+height = 16.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "Fall"
@@ -158,6 +158,8 @@ func _ready():
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -171,7 +173,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 hframes = 5
 vframes = 4
-frame = 11
+frame = 10
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 8 )
@@ -179,3 +181,7 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 9 )
 script = SubResource( 10 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 25 )

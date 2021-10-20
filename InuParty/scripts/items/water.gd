@@ -24,10 +24,8 @@ func _physics_process(delta) -> void:
 	
 	# ANIMATIONS
 	if Input.is_action_just_pressed("fast_fall"):
-		lineal_vel.x=0
 		lineal_vel.y += GRAVITY * 50
-		var velocity = Vector2.DOWN
-		var collision = move_and_collide(velocity * 200)
-		if collision:
-			playback.travel("splash")
+		
+	if $RayCast2D.is_colliding():
+		playback.travel("splash")
 		
