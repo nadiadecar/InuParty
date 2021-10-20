@@ -5,7 +5,7 @@
 [ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Cat.gd" type="Script" id=4]
 [ext_resource path="res://scenes/items/bomb.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/items/objeto.gd" type="Script" id=6]
+[ext_resource path="res://scenes/items/Bone.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/items/objeto_thor.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/items/thunder.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/items/water.tscn" type="PackedScene" id=9]
@@ -13,7 +13,6 @@
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scripts/Portal.gd" type="Script" id=13]
-
 
 [node name="Main" type="Node2D"]
 
@@ -37,7 +36,6 @@ script = ExtResource( 4 )
 
 [node name="bomb_obj" parent="Game" instance=ExtResource( 5 )]
 position = Vector2( 457.414, -356.063 )
-script = ExtResource( 6 )
 
 [node name="thor_obj" parent="Game" instance=ExtResource( 7 )]
 position = Vector2( 137.414, -332.063 )
@@ -51,3 +49,5 @@ position = Vector2( 513.414, 59.9369 )
 [node name="portal" parent="Game" instance=ExtResource( 12 )]
 position = Vector2( 369.414, 35.9369 )
 script = ExtResource( 13 )
+
+[node name="Bone" parent="Game" instance=ExtResource( 6 )]
