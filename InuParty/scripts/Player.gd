@@ -7,6 +7,8 @@ var GRAVITY = 400
 
 var _facing_right = true
 
+var cat_plane = false
+
 onready var playback = $AnimationTree.get("parameters/playback")
 
 func _ready() -> void:
@@ -26,6 +28,7 @@ func _physics_process(delta) -> void:
 	
 	if on_floor and Input.is_action_just_pressed("jump"):
 		lineal_vel.y = -SPEED
+		lineal_vel.x = max(0, lineal_vel.x - 200) # el perrito reduce su velocidad al saltar, se prioriza uso de objetos
 	
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right") and _facing_right:
 		_facing_right = false
@@ -45,3 +48,13 @@ func _physics_process(delta) -> void:
 			playback.travel("Run")
 	else:
 			playback.travel("Jump")
+
+
+func change_plane():
+	print("Cambiando plano")
+	cat_plane = not cat_plane
+	if cat_plane == true:
+		self.position.y = -315
+	else:
+		self.position.y = 100
+	
