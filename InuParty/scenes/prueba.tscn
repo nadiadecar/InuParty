@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/container.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 63.0
+margin_bottom = 63.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" parent="GridContainer" instance=ExtResource( 1 )]
