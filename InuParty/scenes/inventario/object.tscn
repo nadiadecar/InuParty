@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/martillo.png" type="Texture" id=1]
+
+[node name="object" type="Sprite"]
+scale = Vector2( 0.45, 0.45 )
+texture = ExtResource( 1 )
