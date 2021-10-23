@@ -37,3 +37,5 @@ script = ExtResource( 13 )
 [node name="Items" type="Node2D" parent="Game"]
 position = Vector2( 425.414, -380.063 )
 script = ExtResource( 14 )
+
+[node name="Timer" type="Timer" parent="Game/Items"]
