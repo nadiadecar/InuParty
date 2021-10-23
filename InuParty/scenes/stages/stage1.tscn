@@ -28,11 +28,20 @@ position = Vector2( 881.414, -316.063 )
 script = ExtResource( 4 )
 
 [node name="wall" parent="Game" instance=ExtResource( 10 )]
-position = Vector2( 513.414, 59.9369 )
+position = Vector2( 513.414, 59.937 )
+
+[node name="wall2" parent="Game" instance=ExtResource( 10 )]
+position = Vector2( 15809.4, 59.937 )
+
+[node name="wall3" parent="Game" instance=ExtResource( 10 )]
+position = Vector2( 4633.41, 59.937 )
 
 [node name="portal" parent="Game" instance=ExtResource( 12 )]
-position = Vector2( 313.414, 11.937 )
+position = Vector2( 8057.41, 19.937 )
 script = ExtResource( 13 )
+
+[node name="portal2" parent="Game" instance=ExtResource( 12 )]
+position = Vector2( 12865.4, -380.063 )
 
 [node name="Items" type="Node2D" parent="Game"]
 position = Vector2( 425.414, -380.063 )
