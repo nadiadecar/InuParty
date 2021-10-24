@@ -31,6 +31,12 @@ func _physics_process(delta) -> void:
 		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
 		
+#	if actualItem.get_node("RayCast2D").get_collider() != null:
+#		timer.set_wait_time( 1.5 )
+#		timer.connect("timeout", self, "_on_Timer_timeout")
+#		timer.start()
+#		print("jeje")
+		
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)

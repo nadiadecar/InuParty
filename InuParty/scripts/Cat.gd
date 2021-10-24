@@ -1,9 +1,8 @@
 extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
-#var SPEED = 225
-var SPEED = 0
-var ACCELERATION = 2
+var SPEED = 200
+var ACCELERATION = 1
 var GRAVITY = 400
 
 var NEAR_DISTANCE_THRESHOLD = 100
@@ -20,7 +19,8 @@ func _ready() -> void:
 
 func _physics_process(delta) -> void:
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
-	lineal_vel.x = move_toward(lineal_vel.x, SPEED, ACCELERATION)
+	var target_vel = 1
+	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
 	lineal_vel.y += GRAVITY * delta
 	
 	player_distance = abs(self.position.x - player.position.x)
@@ -28,3 +28,9 @@ func _physics_process(delta) -> void:
 	if (player_distance < NEAR_DISTANCE_THRESHOLD):
 		#pass
 		get_tree().change_scene("res://scenes/ui/win_menu.tscn")
+	
+	#ANIMATIONS
+	if abs(lineal_vel.x) <= 0:
+		playback.travel("Idle")
+	if 0 < abs(lineal_vel.x):
+		playback.travel("Walk")

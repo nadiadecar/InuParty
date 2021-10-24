@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
 var SPEED = 300
-var ACCELERATION = 5
+var ACCELERATION = 1
 var GRAVITY = 400
 
 var _facing_right = true
@@ -22,8 +22,7 @@ func _physics_process(delta) -> void:
 	
 	var on_floor = is_on_floor()
 	
-	var target_vel = Input.get_action_strength("right") - Input.get_action_strength("left")
-	
+	var target_vel = 1
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
 	
 	if on_floor and Input.is_action_just_pressed("jump"):
