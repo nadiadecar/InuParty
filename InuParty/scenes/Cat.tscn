@@ -155,3 +155,9 @@ anims/Walk = SubResource( 3 )
 tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 9 )
+
+[node name="WaterTimer" type="Timer" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 80, 0 )

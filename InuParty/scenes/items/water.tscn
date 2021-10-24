@@ -154,34 +154,46 @@ func _ready():
 #	pass
 "
 
-[node name="water" type="KinematicBody2D"]
+[node name="water" type="KinematicBody2D" groups=[
+"cat_nerfs",
+]]
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"cat_nerfs",
+]]
 position = Vector2( 0, 8 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
+"cat_nerfs",
+]]
 anims/Fall = SubResource( 2 )
 anims/spike = SubResource( 3 )
 anims/splash = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." groups=[
+"cat_nerfs",
+]]
 rotation = -0.00351361
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 hframes = 5
 vframes = 4
-frame = 7
+frame = 5
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." groups=[
+"cat_nerfs",
+]]
 tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 9 )
 script = SubResource( 10 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="." groups=[
+"cat_nerfs",
+]]
 enabled = true
 cast_to = Vector2( 0, 25 )
