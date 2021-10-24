@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
 var SPEED = 300
-var ACCELERATION = 5
+var ACCELERATION = 10
 var GRAVITY = 10
 var plane = "cat"
 
@@ -20,7 +20,7 @@ func _physics_process(delta) -> void:
 		lineal_vel.y += GRAVITY * 50
 		
 	if Input.is_action_just_pressed("dog_plane") and plane == "cat":
-		position.y = 220
+		position.y = 250
 		plane = "dog"
 		
 	if Input.is_action_just_pressed("cat_plane") and plane == "dog":

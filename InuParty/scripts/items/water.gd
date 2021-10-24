@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
 var SPEED = 300
-var ACCELERATION = 5
+var ACCELERATION = 10
 var GRAVITY = 10
 var plane = "cat"
 onready var playback = $AnimationTree.get("parameters/playback")
