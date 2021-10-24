@@ -4,6 +4,7 @@ var lineal_vel = Vector2.ZERO
 var SPEED = 300
 var ACCELERATION = 5
 var GRAVITY = 10
+var plane = "cat"
 
 onready var playback = $AnimationTree.get("parameters/playback")
 
@@ -30,3 +31,11 @@ func _physics_process(delta) -> void:
 		var colObj = $RayCast2D.get_collider()
 		if colObj.is_in_group("Inu"):
 			playback.travel("Active")
+
+	if Input.is_action_just_pressed("dog_plane") and plane == "cat":
+		position.y = 180
+		plane = "dog"
+		
+	if Input.is_action_just_pressed("cat_plane") and plane == "dog":
+		position.y = 0
+		plane = "cat"

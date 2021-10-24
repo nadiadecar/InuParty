@@ -4,7 +4,7 @@ var lineal_vel = Vector2.ZERO
 var SPEED = 300
 var ACCELERATION = 5
 var GRAVITY = 10
-
+var plane = "cat"
 
 func _physics_process(delta) -> void:
 	
@@ -18,3 +18,11 @@ func _physics_process(delta) -> void:
 
 	if Input.is_action_just_pressed("fast_fall"):
 		lineal_vel.y += GRAVITY * 50
+		
+	if Input.is_action_just_pressed("dog_plane") and plane == "cat":
+		position.y = 220
+		plane = "dog"
+		
+	if Input.is_action_just_pressed("cat_plane") and plane == "dog":
+		position.y = 0
+		plane = "cat"
