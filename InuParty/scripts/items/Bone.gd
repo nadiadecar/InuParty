@@ -31,6 +31,8 @@ func _physics_process(delta) -> void:
 		var colObj = $RayCast2D.get_collider()
 		if colObj.is_in_group("Inu"):
 			playback.travel("Active")
+		else:
+			playback.travel("Inactive")
 
 			
 
