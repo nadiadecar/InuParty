@@ -154,7 +154,9 @@ start_node = "fall"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
-[node name="Node2D" type="KinematicBody2D"]
+[node name="Node2D" type="KinematicBody2D" groups=[
+"destroyers",
+]]
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 3 )
 

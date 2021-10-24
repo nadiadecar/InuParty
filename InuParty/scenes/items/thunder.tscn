@@ -118,7 +118,9 @@ start_node = "Fall"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
-[node name="thunder" type="KinematicBody2D"]
+[node name="thunder" type="KinematicBody2D" groups=[
+"destroyers",
+]]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -127,7 +129,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 13
-frame = 6
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Active = SubResource( 2 )
