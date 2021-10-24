@@ -43,7 +43,8 @@ func _on_Timer_timeout():
 	itemList.shuffle()
 	actualItem= itemList[0].instance()
 	self.add_child(actualItem)
-	actualItem.global_position = global_position
+	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
+	actualItem.global_position.y = global_position.y 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
