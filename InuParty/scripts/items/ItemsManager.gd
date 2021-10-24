@@ -30,7 +30,7 @@ func _physics_process(delta) -> void:
 		timer.set_wait_time( 0.05 )
 		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
-
+		
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)

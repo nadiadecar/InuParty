@@ -32,6 +32,8 @@ func _physics_process(delta) -> void:
 		if colObj.is_in_group("Inu"):
 			playback.travel("Active")
 
+			
+
 	if Input.is_action_just_pressed("dog_plane") and plane == "cat":
 		position.y = 180
 		plane = "dog"
@@ -39,3 +41,4 @@ func _physics_process(delta) -> void:
 	if Input.is_action_just_pressed("cat_plane") and plane == "dog":
 		position.y = 0
 		plane = "cat"
+
