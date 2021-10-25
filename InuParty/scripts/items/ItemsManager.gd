@@ -14,6 +14,7 @@ var actualItem
 onready var timer = $Timer
 var hold
 
+
 func _ready():
 	itemList.shuffle()
 	print(itemList)
@@ -23,8 +24,14 @@ func _ready():
 	
 	
 func _physics_process(delta) -> void:
+	var container = get_parent().get_node("HolderBox").get_node("container")
+	var camara = get_parent().get_node("Player").get_node("Camera2D")
+	if camara.global_position.x - container.global_position.x > 400: 
+		container.global_position.x = camara.global_position.x - 400
+	
+	
 	if hold: 
-		hold.global_position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x - 400
+		hold.global_position.x = camara.global_position.x - 400
 		hold.global_position.y = global_position.y
 	
 	if Input.is_action_just_pressed("fast_fall"):
@@ -48,14 +55,14 @@ func _physics_process(delta) -> void:
 					self.remove_child(actualItem)
 					actualItem = itemDic[hold_helper].instance()
 					self.add_child(actualItem)
-					actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
+					actualItem.position.x = camara.global_position.x
 					actualItem.global_position.y = global_position.y 
 					
 					#creando el hold
 					get_parent().get_node("Holder").remove_child(hold)
 					hold = itemDic[actualType].instance()
 					get_parent().get_node("Holder").add_child(hold)
-					hold.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x - 400
+					hold.position.x = camara.global_position.x - 400
 					hold.global_position.y = global_position.y
 					
 				
@@ -65,7 +72,7 @@ func _physics_process(delta) -> void:
 				
 				hold = itemDic[actualType].instance()
 				get_parent().get_node("Holder").add_child(hold)
-				hold.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x - 400
+				hold.position.x = camara.global_position.x - 400
 				hold.global_position.y = global_position.y 
 				
 				
