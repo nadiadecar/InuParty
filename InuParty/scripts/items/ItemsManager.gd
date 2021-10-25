@@ -32,13 +32,20 @@ func _physics_process(delta) -> void:
 		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
 		
+#	if actualItem.get_node("RayCast2D").get_collider() != null:
+#		timer.set_wait_time( 1.5 )
+#		timer.connect("timeout", self, "_on_Timer_timeout")
+#		timer.start()
+#		print("jeje")
+		
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)
 	itemList.shuffle()
 	actualItem= itemList[0].instance()
 	self.add_child(actualItem)
-	actualItem.global_position = global_position
+	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
+	actualItem.global_position.y = global_position.y 
 
 
 func _hold_Item():

@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var lineal_vel = Vector2.ZERO
-var SPEED = 300
-var ACCELERATION = 5
+var SPEED = 200
+var ACCELERATION = 1
 var GRAVITY = 400
 
 var _facing_right = true
@@ -10,6 +10,7 @@ var _facing_right = true
 var cat_plane = false
 
 onready var playback = $AnimationTree.get("parameters/playback")
+onready var timer = $VelocityTimer
 
 func _ready() -> void:
 	$AnimationTree.active = true
@@ -22,9 +23,19 @@ func _physics_process(delta) -> void:
 	
 	var on_floor = is_on_floor()
 	
-	var target_vel = Input.get_action_strength("right") - Input.get_action_strength("left")
-	
+	var target_vel = 1
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
+	
+	if $RayCast2D.is_colliding():
+		var colObj = $RayCast2D.get_collider()
+		print(colObj)
+		if colObj.is_in_group("dog_boosters"):
+			SPEED = 250
+			ACCELERATION = 2
+			lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
+			timer.set_wait_time( 10 )
+			timer.connect("timeout", self, "_on_Timer_timeout")
+			timer.start()
 	
 	if on_floor and Input.is_action_just_pressed("jump"):
 		lineal_vel.y = -SPEED
@@ -42,9 +53,9 @@ func _physics_process(delta) -> void:
 	if on_floor:
 		if abs(lineal_vel.x) <= 0:
 			playback.travel("Idle")
-		if 0 < abs(lineal_vel.x) and abs(lineal_vel.x) < 300:
+		if 0 < abs(lineal_vel.x) and abs(lineal_vel.x) < 240:
 			playback.travel("Walk")
-		if 300 <= abs(lineal_vel.x):
+		if 250 <= abs(lineal_vel.x):
 			playback.travel("Run")
 	else:
 			playback.travel("Jump")
@@ -57,4 +68,12 @@ func change_plane():
 		self.position.y = -315
 	else:
 		self.position.y = 100
+		
+func _on_Timer_timeout():
+	timer.stop()
+	SPEED = 200
+	ACCELERATION = 1
+	var target_vel = 1
+	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
+	
 	

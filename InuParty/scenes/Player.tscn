@@ -261,3 +261,9 @@ zoom = Vector2( 0.8, 0.8 )
 limit_left = -100
 limit_top = -100
 limit_bottom = 1200
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, -30 )
+
+[node name="VelocityTimer" type="Timer" parent="."]

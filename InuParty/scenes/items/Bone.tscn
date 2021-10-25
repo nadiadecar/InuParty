@@ -66,6 +66,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 3, 3 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Fall"
@@ -107,6 +119,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "Inactive"
@@ -147,6 +171,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 3.5, 3.5 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=5]
 animation = "Active"
@@ -173,26 +209,39 @@ start_node = "Fall"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
-[node name="Bone" type="KinematicBody2D"]
+[node name="Bone" type="KinematicBody2D" groups=[
+"dog_boosters",
+]]
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"dog_boosters",
+]]
 shape = SubResource( 1 )
+disabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
+"dog_boosters",
+]]
 anims/Active = SubResource( 2 )
 anims/Fall = SubResource( 3 )
 anims/Inactive = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 2.5, 2.5 )
+[node name="Sprite" type="Sprite" parent="." groups=[
+"dog_boosters",
+]]
+scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 6 )
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." groups=[
+"dog_boosters",
+]]
 tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 11 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="RayCast2D" type="RayCast2D" parent="." groups=[
+"dog_boosters",
+]]
 enabled = true
 cast_to = Vector2( 0, 20 )
