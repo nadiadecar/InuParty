@@ -6,6 +6,7 @@ var ACCELERATION = 10
 var GRAVITY = 10
 var plane = "cat"
 onready var playback = $AnimationTree.get("parameters/playback")
+var objectType = "Water"
 
 func _ready() -> void:
 	$AnimationTree.active = true

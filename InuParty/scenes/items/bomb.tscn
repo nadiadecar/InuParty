@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sprites/bomb.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Fire Effect 2/Explosion SpriteSheet.png" type="Texture" id=2]
-[ext_resource path="res://scripts/items/generalItemScript.gd" type="Script" id=3]
+[ext_resource path="res://scenes/items/bomb.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 177.778

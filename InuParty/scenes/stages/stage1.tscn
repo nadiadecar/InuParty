@@ -42,9 +42,13 @@ script = ExtResource( 13 )
 
 [node name="portal2" parent="Game" instance=ExtResource( 12 )]
 position = Vector2( 12865.4, -380.063 )
+script = ExtResource( 13 )
 
 [node name="Items" type="Node2D" parent="Game"]
-position = Vector2( 417.414, -380.063 )
+position = Vector2( 417.414, -375.063 )
 script = ExtResource( 14 )
 
 [node name="Timer" type="Timer" parent="Game/Items"]
+
+[node name="Holder" type="Node2D" parent="Game"]
+position = Vector2( 9.89954, -375.595 )

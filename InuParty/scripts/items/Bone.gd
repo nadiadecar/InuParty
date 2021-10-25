@@ -5,6 +5,7 @@ var SPEED = 300
 var ACCELERATION = 10
 var GRAVITY = 10
 var plane = "cat"
+var objectType = "Bone"
 
 onready var playback = $AnimationTree.get("parameters/playback")
 
