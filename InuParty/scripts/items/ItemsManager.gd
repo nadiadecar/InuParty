@@ -11,6 +11,7 @@ var itemList = [Thunder, Bomb, Water, Bone, Thor]
 # var b = "text"
 var actualItem
 onready var timer = $Timer
+var hold
 
 func _ready():
 	itemList.shuffle()
@@ -39,6 +40,15 @@ func _on_Timer_timeout():
 	self.add_child(actualItem)
 	actualItem.global_position = global_position
 
+
+func _hold_Item():
+	if Input.is_action_just_pressed("hold"):
+		if is_instance_valid(hold):  
+			pass
+			
+		
+		
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

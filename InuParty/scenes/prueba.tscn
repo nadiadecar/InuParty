@@ -12,3 +12,4 @@ __meta__ = {
 }
 
 [node name="TextureRect" parent="GridContainer" instance=ExtResource( 1 )]
+rect_scale = Vector2( 1, 1 )
