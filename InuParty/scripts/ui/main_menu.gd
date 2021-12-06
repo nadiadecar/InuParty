@@ -16,7 +16,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func on_start_pressed():
-	get_tree().change_scene("res://scenes/stages/stage1.tscn")
+	get_tree().change_scene("res://scenes/ui/levelSelector.tscn")
 	
 	
 func on_quit_pressed():
