@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cyberpunk-street.mp3-f206f2d2b2dd1110febaf11a6249d1c6.mp3str"
+
+[deps]
+
+source_file="res://Tilesets/cyberpunk-street-files/music/cyberpunk-street.mp3"
+dest_files=[ "res://.import/cyberpunk-street.mp3-f206f2d2b2dd1110febaf11a6249d1c6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

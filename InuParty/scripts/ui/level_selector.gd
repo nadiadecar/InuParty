@@ -8,6 +8,7 @@ onready var level1_button = $VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer
 onready var level2_button = $VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer2/level2
 onready var level3_button = $VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer3/level3
 onready var level4_button = $VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer4/level4
+onready var level5_button = $VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer5/level5
 onready var back_button = $VBoxContainer/CanvasLayer2/back
 
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +17,7 @@ func _ready():
 	level2_button.connect("pressed", self, "on_level2_pressed")
 	level3_button.connect("pressed", self, "on_level3_pressed")
 	level4_button.connect("pressed", self, "on_level4_pressed")
+	level5_button.connect("pressed", self, "on_level5_pressed")
 	back_button.connect("pressed", self, "on_back_pressed")
 
 
@@ -33,6 +35,9 @@ func on_level3_pressed():
 	
 func on_level4_pressed():
 	get_tree().change_scene("res://scenes/stages/stage4.tscn")
+	
+func on_level5_pressed():
+	get_tree().change_scene("res://scenes/stages/stage5.tscn")
 	
 func on_back_pressed():
 	get_tree().change_scene("res://scenes/ui/main_menu.tscn")
