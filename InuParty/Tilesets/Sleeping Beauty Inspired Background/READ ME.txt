@@ -1,0 +1,40 @@
+Hi! Thank you for downloading my free game assets,
+I hope you enjoy them!
+Feel free to contact me if you want to or leave a comment!
+
+Info:
+	
+	Artwork by Dallie Mond
+	Sleeping Beauty Inspired Background
+	PNG Formats
+
+Contact:
+
+	Twitter: @dallie_mond
+	Instagram: @dallie.mond
+	Itch.io: dallie.moon
+
+Contents:
+	
+	Layers Folder
+	Contains all the layers of trees, bushes and ground 
+	ready to use in PNG format, which includes:
+		-First Background
+		-Second Background
+		-Third Background
+		-Ground
+		-Foreground
+		
+	READ ME
+	The file you are reading right now
+
+	Preview
+	Showcase of the working tileset
+	
+	Palette
+	Palette used steamlords-32
+
+
+Palette used: 
+
+	https://lospec.com/palette-list/steam-lords

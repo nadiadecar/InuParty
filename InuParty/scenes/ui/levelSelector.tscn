@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://fonts/AvenuePixel-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sprites/sky/Free DEMO Pixel Skies Background pack by Digital Moons/Pixel Skies 1920x1080px (Full HD)/demo01_PixelSky_1920x1080.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=5]
 [ext_resource path="res://scripts/ui/level_selector.gd" type="Script" id=6]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=7]
+[ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
+[ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Setting.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -132,6 +134,66 @@ texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
 [sub_resource type="DynamicFont" id=19]
+size = 40
+outline_size = 4
+outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
+extra_spacing_char = 5
+extra_spacing_space = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 288, 208 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 40
+outline_size = 4
+outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
+extra_spacing_char = 5
+extra_spacing_space = 4
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxTexture" id=26]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 960, 320 )
+
+[sub_resource type="DynamicFont" id=27]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -287,6 +349,38 @@ custom_styles/pressed = SubResource( 17 )
 custom_styles/normal = SubResource( 18 )
 custom_fonts/font = SubResource( 19 )
 text = "LEVEL 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer6" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
+
+[node name="level6" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer6"]
+margin_left = 440.0
+margin_top = 456.0
+margin_right = 616.0
+margin_bottom = 568.0
+custom_styles/hover = SubResource( 20 )
+custom_styles/pressed = SubResource( 21 )
+custom_styles/normal = SubResource( 22 )
+custom_fonts/font = SubResource( 23 )
+text = "LEVEL 6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer7" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
+
+[node name="level7" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer7"]
+margin_left = 656.0
+margin_top = 456.0
+margin_right = 832.0
+margin_bottom = 568.0
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/normal = SubResource( 26 )
+custom_fonts/font = SubResource( 27 )
+text = "LEVEL 7"
 __meta__ = {
 "_edit_use_anchors_": false
 }
