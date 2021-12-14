@@ -118,9 +118,7 @@ start_node = "Fall"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=8]
 
-[node name="thunder" type="KinematicBody2D" groups=[
-"destroyers",
-]]
+[node name="thunder" type="KinematicBody2D" groups=["destroyers"]]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -6,9 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 177.778, 444.445 )
 
-[node name="Node2D" type="KinematicBody2D" groups=[
-"destroyers",
-]]
+[node name="Node2D" type="KinematicBody2D" groups=["destroyers"]]
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
 
