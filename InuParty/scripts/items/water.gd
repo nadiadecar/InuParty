@@ -17,7 +17,7 @@ func _physics_process(delta) -> void:
 	
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
 	lineal_vel.y += GRAVITY * delta
-	var on_floor = is_on_floor()
+	var _on_floor = is_on_floor()
 	
 	var target_vel = Input.get_action_strength("right_obj") - Input.get_action_strength("left_obj")
 	

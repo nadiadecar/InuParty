@@ -7,28 +7,28 @@ const Thor = preload("res://scenes/items/objeto_thor.tscn")
 
 var itemDic = {"Thunder":Thunder, "Bomb":Bomb, "Water": Water, "Bone": Bone, "Thor":Thor}
 var itemList = ["Thunder","Bomb","Water","Bone","Thor"]
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var actualItem
 onready var timer = $Timer
+const shaderTime = 0.5
 var hold
 
 
 func _ready():
 	itemList.shuffle()
 	print(itemList)
-	actualItem= itemDic[itemList[0]].instance()
+	actualItem = itemDic[itemList[0]].instance()
 	self.add_child(actualItem)
+	var _twr = $ShaderColorH.connect("tween_completed", self, "_on_h_faded")
+	_set_Material_Shader_toSprite()
 	actualItem.global_position = global_position
-	
-	
-func _physics_process(delta) -> void:
+
+
+func _physics_process(_delta) -> void:
 	var container = get_parent().get_node("HolderBox").get_node("container")
 	var camara = get_parent().get_node("Player").get_node("Camera2D")
 	if camara.global_position.x - container.global_position.x > 400: 
 		container.global_position.x = camara.global_position.x - 400
-	
 	
 	if hold: 
 		hold.global_position.x = camara.global_position.x - 400
@@ -88,13 +88,24 @@ func _on_Timer_timeout():
 	itemList.shuffle()
 	actualItem= itemDic[itemList[0]].instance()
 	self.add_child(actualItem)
+	_set_Material_Shader_toSprite()
 	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
-	actualItem.global_position.y = global_position.y 
+	actualItem.global_position.y = global_position.y
 
+func _set_Material_Shader_toSprite() -> void:
+	$ShaderColorH.stop_all()
+	actualItem.use_parent_material = true
+	actualItem.get_node("Sprite").use_parent_material = true
+
+	$ShaderColorH.interpolate_property(self, "material:shader_param/color:h", self.material.get_shader_param("color").h, 0.5 - self.material.get_shader_param("color").h, shaderTime, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$ShaderColorH.start()
 	
-		
-		
-		
+
+func _on_h_faded(_o, _k):
+	$ShaderColorH.interpolate_property(self, "material:shader_param/color:h", self.material.get_shader_param("color").h, 0.5 - self.material.get_shader_param("color").h, shaderTime, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$ShaderColorH.start()
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

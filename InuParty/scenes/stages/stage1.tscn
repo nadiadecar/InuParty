@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -6,11 +6,18 @@
 [ext_resource path="res://scripts/Cat.gd" type="Script" id=4]
 [ext_resource path="res://sprites/holder.png" type="Texture" id=5]
 [ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=7]
 [ext_resource path="res://scenes/obstacles/Wall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scripts/Portal.gd" type="Script" id=13]
 [ext_resource path="res://scripts/items/ItemsManager.gd" type="Script" id=14]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 7 )
+shader_param/color = Color( 1, 0, 0, 1 )
+shader_param/width = 10.0
+shader_param/active = true
 
 [node name="Main" type="Node2D"]
 
@@ -45,10 +52,13 @@ position = Vector2( 12865.4, -380.063 )
 script = ExtResource( 13 )
 
 [node name="Items" type="Node2D" parent="Game"]
+material = SubResource( 1 )
 position = Vector2( 0, -375.063 )
 script = ExtResource( 14 )
 
 [node name="Timer" type="Timer" parent="Game/Items"]
+
+[node name="ShaderColorH" type="Tween" parent="Game/Items"]
 
 [node name="HolderBox" type="Node2D" parent="Game"]
 position = Vector2( -4.52995e-06, 0 )

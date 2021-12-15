@@ -1,15 +1,8 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sprites/bomb.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Fire Effect 2/Explosion SpriteSheet.png" type="Texture" id=2]
 [ext_resource path="res://scenes/items/bomb.gd" type="Script" id=3]
-[ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=4]
-
-[sub_resource type="ShaderMaterial" id=1]
-shader = ExtResource( 4 )
-shader_param/color = Color( 1, 0, 0, 1 )
-shader_param/width = 10.0
-shader_param/active = true
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 177.778
@@ -160,14 +153,17 @@ start_node = "fall"
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
 [node name="Node2D" type="KinematicBody2D" groups=["destroyers"]]
+use_parent_material = true
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-material = SubResource( 1 )
+use_parent_material = true
 position = Vector2( 0, -0.00012207 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 1 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 26.6667 )
@@ -186,5 +182,3 @@ parameters/playback = SubResource( 9 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, 85 )
-
-[node name="ShaderColorH" type="Tween" parent="."]

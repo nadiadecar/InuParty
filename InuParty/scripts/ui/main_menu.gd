@@ -1,9 +1,6 @@
 extends CanvasLayer
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 onready var start_button = $VBoxContainer/Start
 onready var quit_button = $VBoxContainer/Quit
 
