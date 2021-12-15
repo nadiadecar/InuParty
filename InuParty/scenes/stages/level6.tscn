@@ -511,7 +511,6 @@ texture = ExtResource( 9 )
 
 [node name="cerca3" type="Sprite" parent="ParallaxBackgroundFront/ParallaxLayer/cerca2"]
 position = Vector2( 46.5136, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="cerca3" type="Sprite" parent="ParallaxBackgroundFront/ParallaxLayer"]
@@ -521,7 +520,6 @@ texture = ExtResource( 9 )
 
 [node name="cerca3" type="Sprite" parent="ParallaxBackgroundFront/ParallaxLayer/cerca3"]
 position = Vector2( 46.5136, 0 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="pino2" type="Sprite" parent="ParallaxBackgroundFront/ParallaxLayer"]

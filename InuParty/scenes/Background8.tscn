@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tilesets/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" type="Texture" id=2]
+[ext_resource path="res://Tilesets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" type="Texture" id=3]
+[ext_resource path="res://Tilesets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" type="Texture" id=4]
+
+[node name="Background8" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1880, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 900, 296 )
+scale = Vector2( 3.91667, 3.11765 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1880, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 896.867, 296 )
+scale = Vector2( 3.18626, 3.11765 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1885, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 896, 296 )
+scale = Vector2( 3.18333, 3.11765 )
+texture = ExtResource( 3 )

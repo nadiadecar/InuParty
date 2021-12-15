@@ -14,14 +14,6 @@ outline_size = 18
 outline_color = Color( 0.368627, 0.807843, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 40
-outline_size = 4
-outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
-extra_spacing_char = 5
-extra_spacing_space = 4
-font_data = ExtResource( 1 )
-
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
@@ -46,6 +38,14 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+outline_size = 4
+outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
+extra_spacing_char = 5
+extra_spacing_space = 4
+font_data = ExtResource( 1 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 2880, 32 )
@@ -83,20 +83,20 @@ __meta__ = {
 margin_top = 161.0
 margin_right = 572.0
 margin_bottom = 204.0
-custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "START"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 margin_top = 208.0
 margin_right = 572.0
 margin_bottom = 251.0
-custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "QUIT"
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
