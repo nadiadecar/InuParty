@@ -19,9 +19,10 @@ func _ready():
 	print(itemList)
 	actualItem = itemDic[itemList[0]].instance()
 	self.add_child(actualItem)
+	actualItem.global_position = global_position
+	
 	var _twr = $ShaderColorH.connect("tween_completed", self, "_on_h_faded")
 	_set_Material_Shader_toSprite()
-	actualItem.global_position = global_position
 
 
 func _physics_process(_delta) -> void:
@@ -93,10 +94,10 @@ func _on_Timer_timeout():
 	actualItem.global_position.y = global_position.y
 
 func _set_Material_Shader_toSprite() -> void:
-	$ShaderColorH.stop_all()
 	actualItem.use_parent_material = true
 	actualItem.get_node("Sprite").use_parent_material = true
-
+	
+	$ShaderColorH.reset_all()
 	$ShaderColorH.interpolate_property(self, "material:shader_param/color:h", self.material.get_shader_param("color").h, 0.5 - self.material.get_shader_param("color").h, shaderTime, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$ShaderColorH.start()
 	
