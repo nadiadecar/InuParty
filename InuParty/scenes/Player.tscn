@@ -214,35 +214,46 @@ graph_offset = Vector2( -343.2, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
-[node name="Player" type="KinematicBody2D" groups=["Inu"]]
+[node name="Player" type="KinematicBody2D" groups=[
+"Inu",
+]]
 scale = Vector2( 2.5, 2.5 )
 
-[node name="Sprite" type="Sprite" parent="." groups=["Inu"]]
+[node name="Sprite" type="Sprite" parent="." groups=[
+"Inu",
+]]
 position = Vector2( -3.2, -7.6 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 hframes = 2
-frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Inu"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"Inu",
+]]
 position = Vector2( 0, -6.4 )
 rotation = 1.5708
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["Inu"]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
+"Inu",
+]]
 anims/Idle = SubResource( 2 )
 anims/Jump = SubResource( 3 )
 anims/Run = SubResource( 4 )
 anims/Walk = SubResource( 5 )
 
-[node name="AnimationTree" type="AnimationTree" parent="." groups=["Inu"]]
+[node name="AnimationTree" type="AnimationTree" parent="." groups=[
+"Inu",
+]]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 20 )
 
-[node name="Camera2D" type="Camera2D" parent="." groups=["Inu"]]
+[node name="Camera2D" type="Camera2D" parent="." groups=[
+"Inu",
+]]
 position = Vector2( 0, -110 )
 current = true
 limit_left = -100

@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/obstacles/Wall.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 48, 48 )
+extents = Vector2( 48, 64 )
 
 [node name="Node2D" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -15,9 +15,11 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 100, 120 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -16 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, -16 )
 enabled = true
 cast_to = Vector2( 0, -70 )
 

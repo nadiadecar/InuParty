@@ -11,13 +11,13 @@
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Setting.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/parallax_demon_woods_pack/Captura.PNG" type="Texture" id=10]
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=1]
 size = 150
 outline_size = 18
 outline_color = Color( 0.368627, 0.807843, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=33]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -28,19 +28,19 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=34]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=35]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
 normal_map = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="DynamicFont" id=36]
+[sub_resource type="DynamicFont" id=5]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -48,11 +48,11 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxTexture" id=37]
+[sub_resource type="StyleBoxTexture" id=6]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="StyleBoxFlat" id=38]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -63,18 +63,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=39]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=40]
+[sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 512, 256 )
 
-[sub_resource type="DynamicFont" id=41]
+[sub_resource type="DynamicFont" id=10]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -82,7 +82,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=42]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -93,18 +93,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=43]
+[sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=44]
+[sub_resource type="StyleBoxTexture" id=13]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=45]
+[sub_resource type="DynamicFont" id=14]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -112,7 +112,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=46]
+[sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -123,18 +123,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=47]
+[sub_resource type="StyleBoxFlat" id=16]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=48]
+[sub_resource type="StyleBoxTexture" id=17]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=49]
+[sub_resource type="DynamicFont" id=18]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -142,7 +142,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=50]
+[sub_resource type="StyleBoxFlat" id=19]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -153,18 +153,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=51]
+[sub_resource type="StyleBoxFlat" id=20]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=52]
+[sub_resource type="StyleBoxTexture" id=21]
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=53]
+[sub_resource type="DynamicFont" id=22]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -172,7 +172,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=54]
+[sub_resource type="StyleBoxFlat" id=23]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -183,18 +183,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=55]
+[sub_resource type="StyleBoxFlat" id=24]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=56]
+[sub_resource type="StyleBoxTexture" id=25]
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 960, 320 )
 
-[sub_resource type="DynamicFont" id=57]
+[sub_resource type="DynamicFont" id=26]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -202,7 +202,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=28]
+[sub_resource type="StyleBoxFlat" id=27]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
 border_width_top = 2
@@ -213,18 +213,18 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id=29]
+[sub_resource type="StyleBoxFlat" id=28]
 bg_color = Color( 0.803922, 0.976471, 0.968627, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id=58]
+[sub_resource type="StyleBoxTexture" id=29]
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 344, 156 )
 
-[sub_resource type="DynamicFont" id=31]
+[sub_resource type="DynamicFont" id=30]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -232,7 +232,7 @@ extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=59]
+[sub_resource type="StyleBoxFlat" id=31]
 bg_color = Color( 0.388235, 0.878431, 0.733333, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -266,7 +266,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 1280.0
 margin_bottom = 157.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 1 )
 text = "SELECT A LEVEL"
 align = 1
 __meta__ = {
@@ -292,16 +292,18 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
 
 [node name="level1" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer"]
-anchor_left = 0.184375
-anchor_top = 0.4
-anchor_right = 0.321875
-anchor_bottom = 0.555556
+anchor_left = 0.003125
+anchor_right = 0.003125
+margin_left = 236.0
+margin_top = 288.0
+margin_right = 412.0
+margin_bottom = 400.0
 size_flags_horizontal = 5
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 33 )
-custom_styles/pressed = SubResource( 34 )
-custom_styles/normal = SubResource( 35 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "LEVEL 1"
 __meta__ = {
 "_edit_use_anchors_": true
@@ -310,21 +312,18 @@ __meta__ = {
 [node name="CanvasLayer2" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
 
 [node name="level2" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer2"]
-anchor_left = 0.525
-anchor_top = 0.4
-anchor_right = 0.69375
-anchor_bottom = 0.511111
-margin_left = -20.0
-margin_right = -60.0
-margin_bottom = 32.0
+margin_left = 652.0
+margin_top = 288.0
+margin_right = 828.0
+margin_bottom = 400.0
 focus_neighbour_left = NodePath("../Start")
 focus_neighbour_right = NodePath("../level3")
 size_flags_horizontal = 5
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 33 )
-custom_styles/pressed = SubResource( 34 )
-custom_styles/normal = SubResource( 37 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "LEVEL 2"
 __meta__ = {
 "_edit_use_anchors_": true
@@ -343,10 +342,10 @@ margin_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 38 )
-custom_styles/pressed = SubResource( 39 )
-custom_styles/normal = SubResource( 40 )
-custom_fonts/font = SubResource( 41 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 text = "LEVEL 3"
 __meta__ = {
 "_edit_use_anchors_": true
@@ -359,10 +358,10 @@ margin_left = 860.0
 margin_top = 288.0
 margin_right = 1036.0
 margin_bottom = 400.0
-custom_styles/hover = SubResource( 42 )
-custom_styles/pressed = SubResource( 43 )
-custom_styles/normal = SubResource( 44 )
-custom_fonts/font = SubResource( 45 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
 text = "LEVEL 4"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -375,10 +374,10 @@ margin_left = 240.0
 margin_top = 456.0
 margin_right = 416.0
 margin_bottom = 568.0
-custom_styles/hover = SubResource( 46 )
-custom_styles/pressed = SubResource( 47 )
-custom_styles/normal = SubResource( 48 )
-custom_fonts/font = SubResource( 49 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = SubResource( 18 )
 text = "LEVEL 5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -391,10 +390,10 @@ margin_left = 440.0
 margin_top = 456.0
 margin_right = 616.0
 margin_bottom = 568.0
-custom_styles/hover = SubResource( 50 )
-custom_styles/pressed = SubResource( 51 )
-custom_styles/normal = SubResource( 52 )
-custom_fonts/font = SubResource( 53 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/normal = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 text = "LEVEL 6"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -407,10 +406,10 @@ margin_left = 656.0
 margin_top = 456.0
 margin_right = 832.0
 margin_bottom = 568.0
-custom_styles/hover = SubResource( 54 )
-custom_styles/pressed = SubResource( 55 )
-custom_styles/normal = SubResource( 56 )
-custom_fonts/font = SubResource( 57 )
+custom_styles/hover = SubResource( 23 )
+custom_styles/pressed = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+custom_fonts/font = SubResource( 26 )
 text = "LEVEL 7"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -423,10 +422,10 @@ margin_left = 864.0
 margin_top = 456.0
 margin_right = 1040.0
 margin_bottom = 568.0
-custom_styles/hover = SubResource( 28 )
-custom_styles/pressed = SubResource( 29 )
-custom_styles/normal = SubResource( 58 )
-custom_fonts/font = SubResource( 31 )
+custom_styles/hover = SubResource( 27 )
+custom_styles/pressed = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+custom_fonts/font = SubResource( 30 )
 text = "LEVEL 8"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -444,10 +443,10 @@ focus_neighbour_right = NodePath("../Quit")
 focus_next = NodePath("../Quit")
 size_flags_horizontal = 5
 size_flags_vertical = 0
-custom_styles/hover = SubResource( 33 )
-custom_styles/pressed = SubResource( 34 )
-custom_styles/normal = SubResource( 59 )
-custom_fonts/font = SubResource( 36 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 31 )
+custom_fonts/font = SubResource( 5 )
 text = "BACK"
 __meta__ = {
 "_edit_use_anchors_": true

@@ -185,36 +185,36 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="ShaderMaterial" id=12]
+[sub_resource type="ShaderMaterial" id=13]
 shader = ExtResource( 11 )
 shader_param/color = Color( 1, 0, 0, 1 )
 shader_param/width = 3.0
 shader_param/active = false
 
-[sub_resource type="AnimationNodeAnimation" id=5]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "Active"
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "Fall"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "Inactive"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
 
-[sub_resource type="AnimationNodeStateMachine" id=10]
-states/Active/node = SubResource( 5 )
+[sub_resource type="AnimationNodeStateMachine" id=19]
+states/Active/node = SubResource( 14 )
 states/Active/position = Vector2( 515, 50.1111 )
-states/Fall/node = SubResource( 6 )
+states/Fall/node = SubResource( 15 )
 states/Fall/position = Vector2( 299, 51 )
-states/Inactive/node = SubResource( 7 )
+states/Inactive/node = SubResource( 16 )
 states/Inactive/position = Vector2( 521.667, 119 )
-transitions = [ "Fall", "Active", SubResource( 8 ), "Fall", "Inactive", SubResource( 9 ) ]
+transitions = [ "Fall", "Active", SubResource( 17 ), "Fall", "Inactive", SubResource( 18 ) ]
 start_node = "Fall"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
 
 [node name="Bone" type="KinematicBody2D" groups=[
 "dog_boosters",
@@ -237,16 +237,16 @@ anims/Inactive = SubResource( 4 )
 [node name="Sprite" type="Sprite" parent="." groups=[
 "dog_boosters",
 ]]
-material = SubResource( 12 )
+material = SubResource( 13 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="." groups=[
 "dog_boosters",
 ]]
-tree_root = SubResource( 10 )
+tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 11 )
+parameters/playback = SubResource( 12 )
 
 [node name="RayCast2D" type="RayCast2D" parent="." groups=[
 "dog_boosters",
