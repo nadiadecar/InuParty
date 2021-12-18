@@ -11,36 +11,36 @@
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0, 1 )
-motion_mirroring = Vector2( 1100, 0 )
+motion_mirroring = Vector2( 1350, 0 )
 
 [node name="demo01_PixelSky_layer01" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 556, 424 )
-scale = Vector2( 4.63333, 4.38519 )
+position = Vector2( 632, 344 )
+scale = Vector2( 5.8, 6.04445 )
 texture = ExtResource( 1 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
-motion_mirroring = Vector2( 1100, 0 )
+motion_mirroring = Vector2( 1350, 0 )
 
 [node name="demo01_PixelSky_layer02" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 552, 424 )
-scale = Vector2( 4.6, 4.38519 )
+position = Vector2( 632, 356 )
+scale = Vector2( 5.8, 6.22223 )
 texture = ExtResource( 3 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.6, 1 )
-motion_mirroring = Vector2( 1100, 0 )
+motion_mirroring = Vector2( 1350, 0 )
 
 [node name="demo01_PixelSky_layer03" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 556, 425.75 )
-scale = Vector2( 4.63333, 4.41111 )
+position = Vector2( 632, 344 )
+scale = Vector2( 5.78333, 6.05741 )
 texture = ExtResource( 2 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.9, 1 )
-motion_mirroring = Vector2( 1100, 0 )
+motion_mirroring = Vector2( 1350, 0 )
 
 [node name="Hills Layer 03" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2( 556, 596 )
-scale = Vector2( 2.17188, 1.15625 )
+position = Vector2( 617.999, 554 )
+scale = Vector2( 2.64844, 1.76563 )
 texture = ExtResource( 4 )
