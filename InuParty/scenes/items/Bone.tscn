@@ -214,42 +214,34 @@ states/Inactive/position = Vector2( 521.667, 119 )
 transitions = [ "Fall", "Active", SubResource( 17 ), "Fall", "Inactive", SubResource( 18 ) ]
 start_node = "Fall"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+[sub_resource type="ShaderMaterial" id=12]
+shader = ExtResource( 11 )
+shader_param/color = Color( 1, 0, 0, 1 )
+shader_param/width = 3.0
+shader_param/active = false
 
-[node name="Bone" type="KinematicBody2D" groups=[
-"dog_boosters",
-]]
+[node name="Bone" type="KinematicBody2D" groups=["dog_boosters"]]
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
-"dog_boosters",
-]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dog_boosters"]]
 shape = SubResource( 1 )
 disabled = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
-"dog_boosters",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["dog_boosters"]]
 anims/Active = SubResource( 2 )
 anims/Fall = SubResource( 3 )
 anims/Inactive = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="." groups=[
-"dog_boosters",
-]]
+[node name="Sprite" type="Sprite" parent="." groups=["dog_boosters"]]
 material = SubResource( 13 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 4 )
 
-[node name="AnimationTree" type="AnimationTree" parent="." groups=[
-"dog_boosters",
-]]
+[node name="AnimationTree" type="AnimationTree" parent="." groups=["dog_boosters"]]
 tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 12 )
 
-[node name="RayCast2D" type="RayCast2D" parent="." groups=[
-"dog_boosters",
-]]
+[node name="RayCast2D" type="RayCast2D" parent="." groups=["dog_boosters"]]
 enabled = true
 cast_to = Vector2( 0, 20 )

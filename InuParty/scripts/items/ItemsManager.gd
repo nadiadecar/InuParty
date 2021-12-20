@@ -15,9 +15,7 @@ var hold
 
 
 func _ready():
-	itemList.shuffle()
-	print(itemList)
-	actualItem = itemDic[itemList[0]].instance()
+	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	actualItem.global_position = global_position
 	
@@ -65,6 +63,7 @@ func _physics_process(_delta) -> void:
 					get_parent().get_node("Holder").add_child(hold)
 					hold.position.x = camara.global_position.x - 400
 					hold.global_position.y = global_position.y
+					hold.holded = true
 					
 				
 		else: 
@@ -74,7 +73,8 @@ func _physics_process(_delta) -> void:
 				hold = itemDic[actualType].instance()
 				get_parent().get_node("Holder").add_child(hold)
 				hold.position.x = camara.global_position.x - 400
-				hold.global_position.y = global_position.y 
+				hold.global_position.y = global_position.y
+				hold.holded = true
 				
 				
 #	if actualItem.get_node("RayCast2D").get_collider() != null:
@@ -86,8 +86,7 @@ func _physics_process(_delta) -> void:
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)
-	itemList.shuffle()
-	actualItem= itemDic[itemList[0]].instance()
+	actualItem= itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	_set_Material_Shader_toSprite()
 	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x

@@ -44,10 +44,9 @@ script = ExtResource( 14 )
 [node name="ShaderColorH" type="Tween" parent="Game/Items"]
 
 [node name="HolderBox" type="Node2D" parent="Game"]
-position = Vector2( -4.52995e-06, 0 )
+position = Vector2( 45, -368 )
 
 [node name="container" type="Sprite" parent="Game/HolderBox"]
-position = Vector2( 42.4923, -368.484 )
 scale = Vector2( 0.02, 0.02 )
 texture = ExtResource( 5 )
 
