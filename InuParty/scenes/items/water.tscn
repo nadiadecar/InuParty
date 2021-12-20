@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://sprites/Water Effect/Water Effect SpriteSheet/Water Spike 01 - SpriteSheet.png" type="Texture" id=1]
 [ext_resource path="res://sprites/Water Effect/Water Effect SpriteSheet/Water Splash 01 - Spritesheet.png" type="Texture" id=2]
@@ -135,65 +135,33 @@ start_node = "Fall"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
-[sub_resource type="GDScript" id=10]
-script/source = "extends AnimationTree
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[node name="water" type="KinematicBody2D" groups=[
-"cat_nerfs",
-]]
+[node name="water" type="KinematicBody2D" groups=["cat_nerfs"]]
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
-"cat_nerfs",
-]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["cat_nerfs"]]
 position = Vector2( 0, 8 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=[
-"cat_nerfs",
-]]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["cat_nerfs"]]
 anims/Fall = SubResource( 2 )
 anims/spike = SubResource( 3 )
 anims/splash = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="." groups=[
-"cat_nerfs",
-]]
+[node name="Sprite" type="Sprite" parent="." groups=["cat_nerfs"]]
 rotation = -0.00351361
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 2 )
 hframes = 5
 vframes = 4
-frame = 5
+frame = 10
 
-[node name="AnimationTree" type="AnimationTree" parent="." groups=[
-"cat_nerfs",
-]]
+[node name="AnimationTree" type="AnimationTree" parent="." groups=["cat_nerfs"]]
 tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 9 )
-script = SubResource( 10 )
 
-[node name="RayCast2D" type="RayCast2D" parent="." groups=[
-"cat_nerfs",
-]]
+[node name="RayCast2D" type="RayCast2D" parent="." groups=["cat_nerfs"]]
 enabled = true
 cast_to = Vector2( 0, 25 )
