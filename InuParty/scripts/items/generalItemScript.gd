@@ -26,6 +26,8 @@ func _physics_process(delta) -> void:
 			
 		if $RayCast2D.is_colliding():
 			playback.travel("Active")
+			get_parent()._on_Timer_timeout()
+		
 
 		if Input.is_action_just_pressed("dog_plane") and plane == "cat":
 			position.y = 200
