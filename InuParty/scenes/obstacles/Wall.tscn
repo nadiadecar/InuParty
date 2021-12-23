@@ -18,9 +18,4 @@ region_rect = Rect2( 0, 0, 100, 120 )
 position = Vector2( 0, -16 )
 shape = SubResource( 1 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, -16 )
-enabled = true
-cast_to = Vector2( 0, -70 )
-
 [node name="WallTimer" type="Timer" parent="."]
