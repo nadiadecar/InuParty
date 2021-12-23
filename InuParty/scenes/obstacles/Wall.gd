@@ -18,7 +18,7 @@ func _physics_process(delta):
 		var colObj = collision_info.get_collider()
 		if colObj.is_in_group("destroyers"):
 			print("DESTROYER")
-			timer.set_wait_time( 0.5 )
+			timer.set_wait_time( 0.05 )
 			timer.connect("timeout", self, "_on_Timer_timeout")
 			timer.start()
 
