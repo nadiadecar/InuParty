@@ -1,0 +1,82 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/Cat.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Portal.gd" type="Script" id=3]
+[ext_resource path="res://sprites/holder.png" type="Texture" id=4]
+[ext_resource path="res://scripts/Pruebas/ItemsManager2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/obstacles/Wall.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=11]
+[ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=13]
+[ext_resource path="res://scenes/Player2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scripts/Player2.gd" type="Script" id=16]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 13 )
+shader_param/color = Color( 1, 0, 0, 1 )
+shader_param/width = 10.0
+shader_param/active = true
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource( 10 )]
+
+[node name="Game" type="Node2D" parent="."]
+position = Vector2( 0, 444 )
+script = ExtResource( 2 )
+
+[node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 7 )]
+position = Vector2( 622, -87 )
+current = true
+
+[node name="Player" parent="Game" instance=ExtResource( 15 )]
+position = Vector2( 78, 106 )
+script = ExtResource( 16 )
+
+[node name="Cat" parent="Game" instance=ExtResource( 11 )]
+position = Vector2( 385.414, -308.063 )
+script = ExtResource( 1 )
+
+[node name="Items" type="Node2D" parent="Game"]
+material = SubResource( 1 )
+position = Vector2( 0, -375.063 )
+script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="Game/Items"]
+
+[node name="ShaderColorH" type="Tween" parent="Game/Items"]
+
+[node name="HolderBox" type="Node2D" parent="Game"]
+position = Vector2( 45, -368 )
+
+[node name="container" type="Sprite" parent="Game/HolderBox"]
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 4 )
+
+[node name="Holder" type="Node2D" parent="Game"]
+position = Vector2( 9.89954, -375.595 )
+
+[node name="Obstacles" type="Node2D" parent="Game"]
+
+[node name="wall" parent="Game/Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 1329.41, 67.937 )
+
+[node name="wall2" parent="Game/Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 15809.4, 59.937 )
+
+[node name="wall3" parent="Game/Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 2657.41, 59.937 )
+
+[node name="portal" parent="Game/Obstacles" instance=ExtResource( 8 )]
+position = Vector2( 8057.41, 19.937 )
+script = ExtResource( 3 )
+
+[node name="portal2" parent="Game/Obstacles" instance=ExtResource( 8 )]
+position = Vector2( 12865.4, -380.063 )
+script = ExtResource( 3 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]

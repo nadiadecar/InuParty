@@ -25,6 +25,8 @@ func _ready():
 
 func _physics_process(_delta) -> void:
 	var container = get_parent().get_node("HolderBox").get_node("container")
+	
+	#Solo funciona para el caso de stage1
 	var camara = get_parent().get_node("Player").get_node("Camera2D")
 	if camara.global_position.x - container.global_position.x > 400: 
 		container.global_position.x = camara.global_position.x - 400
