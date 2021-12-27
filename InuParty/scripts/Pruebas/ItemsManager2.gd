@@ -28,12 +28,16 @@ func _physics_process(_delta) -> void:
 	
 	#Solo funciona para el caso de stage1-Camara
 	var camara = get_parent().get_node("CamaraMultiObjetivos")
-	if camara.global_position.x - container.global_position.x > 400: 
-		container.global_position.x = camara.global_position.x - 400
+	var pos_cam = camara.global_position
+	var tam_cam = camara.zoom
+
+	# print(pos_cam, tam_cam)
+	container.global_position.x = pos_cam.x - (500 * tam_cam.x)
+	container.global_position.y = pos_cam.y - (300 * tam_cam.y)
 	
 	if hold: 
-		hold.global_position.x = camara.global_position.x - 400
-		hold.global_position.y = global_position.y
+		hold.global_position.x = container.global_position.x
+		hold.global_position.y = container.global_position.y
 	
 	if Input.is_action_just_pressed("fast_fall"):
 		timer.set_wait_time( 1.5 )
@@ -98,7 +102,7 @@ func _on_Timer_timeout():
 	actualItem= itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	_set_Material_Shader_toSprite()
-	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
+	actualItem.position.x = get_parent().get_node("CamaraMultiObjetivos").global_position.x
 	actualItem.global_position.y = global_position.y
 
 func _set_Material_Shader_toSprite() -> void:
