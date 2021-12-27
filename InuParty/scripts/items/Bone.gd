@@ -8,4 +8,5 @@ func _physics_process(delta) -> void:
 		if colObj.is_in_group("Inu"):
 			playback.travel("Active")
 		else:
+
 			playback.travel("Inactive")

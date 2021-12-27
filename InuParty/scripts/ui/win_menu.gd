@@ -1,7 +1,7 @@
 tool
 extends CanvasLayer
 
-onready var restart_btn = $VBoxContainer/Pause
+onready var restart_btn = $VBoxContainer/Reiniciar
 
 func _ready() -> void:
 	restart_btn.connect("pressed", self, "_on_restart_pressed")
