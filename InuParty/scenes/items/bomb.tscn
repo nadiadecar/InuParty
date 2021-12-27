@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/Fire Effect 2/Explosion SpriteSheet.png" type="Texture" id=2]
 [ext_resource path="res://scenes/items/bomb.gd" type="Script" id=3]
@@ -70,6 +70,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=3]
+resource_name = "Fall"
 length = 1.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:texture")
@@ -132,24 +133,6 @@ tracks/4/keys = {
 "values": [ Vector2( 6, 6 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=4]
-animation = "Active"
-
-[sub_resource type="AnimationNodeAnimation" id=5]
-animation = "fall"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=6]
-
-[sub_resource type="AnimationNodeStateMachine" id=7]
-states/Active/node = SubResource( 4 )
-states/Active/position = Vector2( 681.667, 73.2222 )
-states/fall/node = SubResource( 5 )
-states/fall/position = Vector2( 438.667, 73.2222 )
-transitions = [ "fall", "Active", SubResource( 6 ) ]
-start_node = "fall"
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
-
 [node name="Node2D2" type="KinematicBody2D" groups=["destroyers"]]
 use_parent_material = true
 scale = Vector2( 0.3, 0.3 )
@@ -162,7 +145,6 @@ scale = Vector2( 6, 6 )
 texture = ExtResource( 2 )
 hframes = 4
 vframes = 4
-frame = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 26.6667 )
@@ -171,13 +153,7 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Active = SubResource( 2 )
-anims/fall = SubResource( 3 )
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 7 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 8 )
+anims/Fall = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true

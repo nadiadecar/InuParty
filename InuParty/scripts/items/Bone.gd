@@ -1,6 +1,5 @@
 extends "res://scripts/items/generalItemScript.gd"
 
-onready var animationPlayer = $AnimationPlayer
 var objectType = "Bone"
 
 func _ready():
