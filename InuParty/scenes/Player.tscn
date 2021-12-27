@@ -4,8 +4,8 @@
 [ext_resource path="res://sprites/shiba_walk.png" type="Texture" id=2]
 [ext_resource path="res://sprites/shiba_idle.png" type="Texture" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 6.74619
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 5.33333, 5.33334 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -222,12 +222,13 @@ position = Vector2( -3.2, -7.6 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Inu"]]
-position = Vector2( 0, -6.4 )
+position = Vector2( -1.60003, -4.80003 )
 rotation = 1.5708
 scale = Vector2( 1.5, 1.5 )
-shape = SubResource( 1 )
+shape = SubResource( 21 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["Inu"]]
 anims/Idle = SubResource( 2 )

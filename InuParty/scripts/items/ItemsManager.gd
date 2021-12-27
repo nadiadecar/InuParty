@@ -15,6 +15,7 @@ var hold
 
 
 func _ready():
+	randomize()
 	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	actualItem.global_position = global_position
@@ -88,7 +89,7 @@ func _physics_process(_delta) -> void:
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)
-	actualItem= itemDic[itemList[randi() % itemList.size()]].instance()
+	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	_set_Material_Shader_toSprite()
 	actualItem.position.x = get_parent().get_node("Player").get_node("Camera2D").global_position.x
