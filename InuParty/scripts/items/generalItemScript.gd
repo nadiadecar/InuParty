@@ -6,11 +6,11 @@ var GRAVITY = 10
 var plane = "cat"
 var holded = false
 
-onready var playback = $AnimationTree.get("parameters/playback")
+#onready var playback = $AnimationTree.get("parameters/playbacsk")
 
 func _ready() -> void:
-	$AnimationTree.active = true
-	get_node("AnimationPlayer")
+	pass
+	#$AnimationTree.active = true
 
 
 func _physics_process(delta) -> void:
@@ -25,7 +25,7 @@ func _physics_process(delta) -> void:
 			lineal_vel.y += GRAVITY * 50
 			
 		if $RayCast2D.is_colliding():
-			playback.travel("Active")
+			#playback.travel("Active")
 			get_parent()._on_Timer_timeout()
 		
 

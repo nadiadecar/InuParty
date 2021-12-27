@@ -15,7 +15,6 @@ var hold
 
 
 func _ready():
-	$PausePopup.hide()
 	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	actualItem.global_position = global_position
@@ -114,8 +113,3 @@ func _set_Material_Shader_toSprite() -> void:
 func _on_h_faded(_o, _k):
 	$ShaderColorH.interpolate_property(self, "material:shader_param/color:h", self.material.get_shader_param("color").h, 0.5 - self.material.get_shader_param("color").h, shaderTime, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$ShaderColorH.start()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

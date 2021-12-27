@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Player.gd" type="Script" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://sprites/holder.png" type="Texture" id=5]
 [ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=7]
-[ext_resource path="res://scenes/ui/pause_menu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/obstacles/Wall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
@@ -74,14 +73,3 @@ position = Vector2( 12865.4, -380.063 )
 script = ExtResource( 13 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
-
-[node name="PausePopup" type="Popup" parent="."]
-visible = true
-margin_left = 250.0
-margin_top = 250.0
-margin_right = 290.0
-margin_bottom = 290.0
-
-[node name="PauseMenu" parent="PausePopup" instance=ExtResource( 8 )]
-scale = Vector2( 0.5, 0.5 )
-transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )

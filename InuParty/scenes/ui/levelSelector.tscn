@@ -17,6 +17,14 @@ outline_size = 18
 outline_color = Color( 0.368627, 0.807843, 0.709804, 1 )
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 40
+outline_size = 4
+outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
+extra_spacing_char = 5
+extra_spacing_space = 4
+font_data = ExtResource( 1 )
+
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
 border_width_left = 2
@@ -40,7 +48,7 @@ texture = ExtResource( 2 )
 normal_map = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 1920, 1080 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=9]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -70,17 +78,17 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 512, 256 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[sub_resource type="DynamicFont" id=14]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
 extra_spacing_char = 5
 extra_spacing_space = 4
 font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxTexture" id=10]
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 1920, 1080 )
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.988235, 0.984314, 0.729412, 1 )
@@ -104,7 +112,7 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=18]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -134,7 +142,7 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=22]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -164,7 +172,7 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 288, 208 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=26]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -194,7 +202,7 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 960, 320 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=30]
 size = 40
 outline_size = 4
 outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
@@ -224,14 +232,6 @@ corner_radius_bottom_left = 4
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 344, 156 )
 
-[sub_resource type="DynamicFont" id=30]
-size = 40
-outline_size = 4
-outline_color = Color( 0.133333, 0.337255, 0.290196, 1 )
-extra_spacing_char = 5
-extra_spacing_space = 4
-font_data = ExtResource( 1 )
-
 [sub_resource type="StyleBoxFlat" id=31]
 bg_color = Color( 0.388235, 0.878431, 0.733333, 1 )
 corner_radius_top_left = 10
@@ -255,10 +255,13 @@ __meta__ = {
 anchor_top = 0.0555555
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -16.0
+margin_right = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_clip_content = true
 size_flags_horizontal = 0
+custom_constants/separation = 30
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -273,180 +276,151 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="VBoxContainer"]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CanvasLayer"]
-anchor_left = 0.41875
-anchor_top = 0.0222222
-anchor_right = 0.5875
-anchor_bottom = 1.02222
-grow_vertical = 2
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_left = 210.0
+margin_top = 187.0
+margin_right = 1070.0
+margin_bottom = 447.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-size_flags_stretch_ratio = 10.76
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": true
-}
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 4
 
-[node name="CanvasLayer" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level1" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer"]
-anchor_left = 0.003125
-anchor_right = 0.003125
-margin_left = 236.0
-margin_top = 288.0
-margin_right = 412.0
-margin_bottom = 400.0
+[node name="level1" type="Button" parent="VBoxContainer/GridContainer"]
+margin_right = 200.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 200, 120 )
 size_flags_horizontal = 5
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 5 )
 text = "LEVEL 1"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level2" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer2"]
-anchor_left = 0.365625
-anchor_top = 0.4
-anchor_right = 0.509375
-anchor_bottom = 0.511111
-margin_left = -20.0
-margin_right = -28.0
-margin_bottom = 32.0
+[node name="level2" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 220.0
+margin_right = 420.0
+margin_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 2
+rect_min_size = Vector2( 200, 120 )
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 9 )
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 9 )
 text = "LEVEL 2"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level3" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer3"]
-margin_left = 652.0
-margin_top = 288.0
-margin_right = 828.0
-margin_bottom = 400.0
+[node name="level3" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 440.0
+margin_right = 640.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 200, 120 )
 focus_neighbour_left = NodePath("../Start")
-focus_neighbour_right = NodePath("../level3")
+focus_neighbour_right = NodePath(".")
 size_flags_horizontal = 5
 size_flags_vertical = 0
+custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 5 )
 text = "LEVEL 3"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="CanvasLayer4" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level4" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer4"]
-margin_left = 860.0
-margin_top = 288.0
-margin_right = 1036.0
-margin_bottom = 400.0
+[node name="level4" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 660.0
+margin_right = 860.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 14 )
 custom_styles/hover = SubResource( 11 )
 custom_styles/pressed = SubResource( 12 )
 custom_styles/normal = SubResource( 13 )
-custom_fonts/font = SubResource( 14 )
 text = "LEVEL 4"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer5" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level5" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer5"]
-margin_left = 240.0
-margin_top = 456.0
-margin_right = 416.0
-margin_bottom = 568.0
+[node name="level5" type="Button" parent="VBoxContainer/GridContainer"]
+margin_top = 140.0
+margin_right = 200.0
+margin_bottom = 260.0
+custom_fonts/font = SubResource( 18 )
 custom_styles/hover = SubResource( 15 )
 custom_styles/pressed = SubResource( 16 )
 custom_styles/normal = SubResource( 17 )
-custom_fonts/font = SubResource( 18 )
 text = "LEVEL 5"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer6" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level6" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer6"]
-margin_left = 440.0
-margin_top = 456.0
-margin_right = 616.0
-margin_bottom = 568.0
+[node name="level6" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 220.0
+margin_top = 140.0
+margin_right = 420.0
+margin_bottom = 260.0
+custom_fonts/font = SubResource( 22 )
 custom_styles/hover = SubResource( 19 )
 custom_styles/pressed = SubResource( 20 )
 custom_styles/normal = SubResource( 21 )
-custom_fonts/font = SubResource( 22 )
 text = "LEVEL 6"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer7" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level7" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer7"]
-margin_left = 656.0
-margin_top = 456.0
-margin_right = 832.0
-margin_bottom = 568.0
+[node name="level7" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 440.0
+margin_top = 140.0
+margin_right = 640.0
+margin_bottom = 260.0
+custom_fonts/font = SubResource( 26 )
 custom_styles/hover = SubResource( 23 )
 custom_styles/pressed = SubResource( 24 )
 custom_styles/normal = SubResource( 25 )
-custom_fonts/font = SubResource( 26 )
 text = "LEVEL 7"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer8" type="CanvasLayer" parent="VBoxContainer/CanvasLayer/VBoxContainer"]
-
-[node name="level8" type="Button" parent="VBoxContainer/CanvasLayer/VBoxContainer/CanvasLayer8"]
-margin_left = 864.0
-margin_top = 456.0
-margin_right = 1040.0
-margin_bottom = 568.0
+[node name="level8" type="Button" parent="VBoxContainer/GridContainer"]
+margin_left = 660.0
+margin_top = 140.0
+margin_right = 860.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 200, 120 )
+custom_fonts/font = SubResource( 30 )
 custom_styles/hover = SubResource( 27 )
 custom_styles/pressed = SubResource( 28 )
 custom_styles/normal = SubResource( 29 )
-custom_fonts/font = SubResource( 30 )
 text = "LEVEL 8"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="VBoxContainer"]
-
-[node name="back" type="Button" parent="VBoxContainer/CanvasLayer2"]
-anchor_left = 0.05
-anchor_top = 0.0888889
-anchor_right = 0.139062
-anchor_bottom = 0.166667
+[node name="back" type="Button" parent="VBoxContainer"]
+margin_left = 565.0
+margin_top = 477.0
+margin_right = 715.0
+margin_bottom = 527.0
 grow_horizontal = 2
+rect_min_size = Vector2( 150, 50 )
 focus_neighbour_right = NodePath("../Quit")
 focus_next = NodePath("../Quit")
-size_flags_horizontal = 5
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 31 )
-custom_fonts/font = SubResource( 5 )
 text = "BACK"
 __meta__ = {
 "_edit_use_anchors_": true
