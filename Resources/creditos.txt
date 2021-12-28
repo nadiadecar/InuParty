@@ -18,3 +18,4 @@ SELECT REDUCED ?pokemon ?alternatePokemon
 
 bombita sonido: https://opengameart.org/content/bombexplosion8bit
 destrucción : https://opengameart.org/content/2-high-quality-explosions
+sonido de fondo:https://mit-mit-mit-mit.itch.io/a-year-to-remember-ost

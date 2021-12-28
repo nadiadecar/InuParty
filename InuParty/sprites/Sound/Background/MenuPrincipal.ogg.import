@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MenuPrincipal.ogg-8b627261f67932f84fee0e8314467ff9.oggstr"
+
+[deps]
+
+source_file="res://sprites/Sound/Background/MenuPrincipal.ogg"
+dest_files=[ "res://.import/MenuPrincipal.ogg-8b627261f67932f84fee0e8314467ff9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=1.0
