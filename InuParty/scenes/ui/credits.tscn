@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/ui/credits.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=32]
-size = 120
+size = 80
 outline_size = 8
 outline_color = Color( 0.368627, 0.807843, 0.709804, 1 )
 font_data = ExtResource( 1 )
@@ -61,8 +61,8 @@ __meta__ = {
 }
 
 [node name="CreditsLabel" type="Label" parent="."]
-margin_left = -16.0
-margin_right = 1264.0
+margin_left = 72.0
+margin_right = 1352.0
 margin_bottom = 1757.0
 custom_fonts/font = SubResource( 32 )
 text = "1111
@@ -76,7 +76,6 @@ text = "1111
 9999
 101010
 "
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
