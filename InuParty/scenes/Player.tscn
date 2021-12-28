@@ -242,13 +242,6 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 20 )
 
-[node name="Camera2D" type="Camera2D" parent="." groups=["Inu"]]
-position = Vector2( 0, -110 )
-current = true
-limit_left = -100
-limit_top = -120
-limit_bottom = 1000
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, -30 )
