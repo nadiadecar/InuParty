@@ -33,11 +33,13 @@ func _physics_process(_delta) -> void:
 
 	# print(pos_cam, tam_cam)
 	container.global_position.x = pos_cam.x - (500 * tam_cam.x)
-	container.global_position.y = pos_cam.y - (300 * tam_cam.y)
+	container.global_position.y = pos_cam.y - (275 * tam_cam.y)
 	
 	if hold: 
 		hold.global_position.x = container.global_position.x
 		hold.global_position.y = container.global_position.y
+		if hold.objectType == "Thor": 
+			hold.global_position.y += 20
 	
 	if Input.is_action_just_pressed("fast_fall"):
 		timer.set_wait_time( 1.5 )

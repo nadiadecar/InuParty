@@ -27,7 +27,7 @@ func _process(delta):
 	for obj in objectives:
 		p += obj.position
 	p /= objectives.size()
-	position = lerp(position, p, velMov) # se establece la posicion de la camara en el centro de los objetivos 
+	position = lerp(position, Vector2(p.x,p.y - 70), velMov) # se establece la posicion de la camara en el centro de los objetivos 
 	
 	#encontrando el zoom que tiene a todos los objetivos 
 	var r = Rect2(position, Vector2.ONE)

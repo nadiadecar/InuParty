@@ -54,7 +54,8 @@ script = ExtResource( 5 )
 position = Vector2( 45, -368 )
 
 [node name="container" type="Sprite" parent="Game/HolderBox"]
-scale = Vector2( 0.02, 0.02 )
+position = Vector2( 0, -9 )
+scale = Vector2( 0.02, 0.0279012 )
 texture = ExtResource( 4 )
 
 [node name="Holder" type="Node2D" parent="Game"]
