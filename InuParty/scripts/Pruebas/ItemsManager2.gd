@@ -83,14 +83,7 @@ func _physics_process(_delta) -> void:
 				hold.position.x = camara.global_position.x - 400
 				hold.global_position.y = global_position.y
 				hold.holded = true
-	
-	if Input.is_action_just_pressed("pause_game") and not get_tree().paused:
-		get_tree().paused = true
-		$PausePopup.show()
-	
-	if Input.is_action_just_pressed("pause_game") and get_tree().paused:
-		$PausePopup.hide()
-		get_tree().paused = false
+
 				
 #	if actualItem.get_node("RayCast2D").get_collider() != null:
 #		timer.set_wait_time( 1.5 )
