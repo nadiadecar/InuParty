@@ -1,14 +1,13 @@
 extends "res://scripts/items/generalItemScript.gd"
-
 var objectType = "Bone"
+var first_col = true
 
-func _ready():
-	animationPlayer.play("Fall")
-
-func _physics_process(delta) -> void:
-	if $RayCast2D.is_colliding():
-		var colObj = $RayCast2D.get_collider()
-		if colObj.is_in_group("Inu"):
-			animationPlayer.play("Active")
-		else:
+func exec_collision():
+	var colObj = $RayCast2D.get_collider()
+	if colObj.is_in_group("Inu"):
+		animationPlayer.play("Active")
+		first_col = false
+	else:
+		if first_col:
+			first_col = false
 			animationPlayer.play("Inactive")
