@@ -9,6 +9,7 @@ onready var level5_button = $VBoxContainer/GridContainer/level5
 onready var level6_button = $VBoxContainer/GridContainer/level6
 onready var level7_button = $VBoxContainer/GridContainer/level7
 onready var level8_button = $VBoxContainer/GridContainer/level8
+onready var tutorial_button = $VBoxContainer/tutorial
 onready var back_button = $VBoxContainer/back
 
 var _1
@@ -22,6 +23,7 @@ func _ready():
 	_1 = level6_button.connect("pressed", self, "on_level6_pressed")
 	_1 = level7_button.connect("pressed", self, "on_level7_pressed")
 	_1 = level8_button.connect("pressed", self, "on_level8_pressed")
+	_1 = tutorial_button.connect("pressed", self, "on_tutorial_pressed")
 	_1 = back_button.connect("pressed", self, "on_back_pressed")
 
 
@@ -49,5 +51,8 @@ func on_level7_pressed():
 func on_level8_pressed():
 	_1 = get_tree().change_scene("res://scenes/stages/stage8.tscn")
 	
+func on_tutorial_pressed():
+	_1 = get_tree().change_scene("res://scenes/stages/tutorial.tscn")
+
 func on_back_pressed():
 	_1 = get_tree().change_scene("res://scenes/ui/main_menu.tscn")

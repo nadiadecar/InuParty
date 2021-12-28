@@ -406,11 +406,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="tutorial" type="Button" parent="VBoxContainer"]
+margin_left = 515.0
+margin_top = 477.0
+margin_right = 765.0
+margin_bottom = 527.0
+grow_horizontal = 2
+rect_min_size = Vector2( 250, 50 )
+focus_neighbour_right = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 31 )
+text = "HOW TO PLAY?"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [node name="back" type="Button" parent="VBoxContainer"]
 margin_left = 565.0
-margin_top = 477.0
+margin_top = 557.0
 margin_right = 715.0
-margin_bottom = 527.0
+margin_bottom = 607.0
 grow_horizontal = 2
 rect_min_size = Vector2( 150, 50 )
 focus_neighbour_right = NodePath("../Quit")
