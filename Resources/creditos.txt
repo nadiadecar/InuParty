@@ -14,3 +14,7 @@ SELECT REDUCED ?pokemon ?alternatePokemon
         FILTER(?primaryType = ?aPrimaryType || ?primaryType = ?aSecondaryType || ?secondaryType = ?aSecondaryType)
 
     }
+
+
+bombita sonido: https://opengameart.org/content/bombexplosion8bit
+destrucción : https://opengameart.org/content/2-high-quality-explosions

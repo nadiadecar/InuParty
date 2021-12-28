@@ -79,3 +79,5 @@ position = Vector2( 12865.4, -380.063 )
 script = ExtResource( 13 )
 
 [node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
