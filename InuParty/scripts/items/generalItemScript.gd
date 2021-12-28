@@ -5,11 +5,17 @@ var SPEED = 15
 var GRAVITY = 10
 var plane = "cat"
 var holded = false
+var velocity = Vector2(0, 0)
+onready var timer = get_parent().get_node("Timer")
+var first_collision = true
+
 
 onready var animationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	animationPlayer.play("Fall")
+	timer.set_wait_time( 1.0 )
+	timer.connect("timeout", get_parent(), "_on_Timer_timeout")
 
 
 func _physics_process(delta) -> void:
@@ -23,9 +29,10 @@ func _physics_process(delta) -> void:
 		if Input.is_action_just_pressed("fast_fall"):
 			lineal_vel.y += GRAVITY * 50
 			
-		if $RayCast2D.is_colliding():
-			animationPlayer.play("Active")
-			get_parent()._on_Timer_timeout()
+		if $RayCast2D.is_colliding() and first_collision:
+			first_collision = false
+			exec_animation()
+			timer.start()
 		
 
 		if Input.is_action_just_pressed("dog_plane") and plane == "cat":
@@ -39,3 +46,6 @@ func _physics_process(delta) -> void:
 		lineal_vel = move_and_slide(lineal_vel)
 	else:
 		self.collision_layer = 0
+		
+func exec_animation():
+	animationPlayer.play("Active")

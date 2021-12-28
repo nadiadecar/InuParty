@@ -6,7 +6,8 @@ var velocity = Vector2(0, 0)
 
 
 func _ready():
-	pass
+	timer.set_wait_time( 0.1 )
+	timer.connect("timeout", self, "_on_Timer_timeout")
 	
 	
 func _physics_process(delta):
@@ -14,8 +15,6 @@ func _physics_process(delta):
 	if collision_info:
 		var colObj = collision_info.get_collider()
 		if colObj.is_in_group("destroyers"):
-			timer.set_wait_time( 0.05 )
-			timer.connect("timeout", self, "_on_Timer_timeout")
 			timer.start()
 
 

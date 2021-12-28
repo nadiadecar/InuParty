@@ -24,6 +24,4 @@ shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
