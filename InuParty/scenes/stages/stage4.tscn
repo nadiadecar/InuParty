@@ -510,37 +510,39 @@ texture = ExtResource( 13 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 8000, 405 )
 
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="cono" parent="Walls" instance=ExtResource( 11 )]
-position = Vector2( 264, 544 )
-
-[node name="Autum_wall" parent="Walls" instance=ExtResource( 10 )]
-position = Vector2( 1816, 544 )
-
-[node name="Autum_wall2" parent="Walls" instance=ExtResource( 10 )]
-position = Vector2( 6512, 544 )
-
-[node name="cono2" parent="Walls" instance=ExtResource( 11 )]
-position = Vector2( 7224, 544 )
-
-[node name="Autum_wall3" parent="Walls" instance=ExtResource( 10 )]
-position = Vector2( 13472, 536 )
-
-[node name="Autum_wall4" parent="Walls" instance=ExtResource( 10 )]
-position = Vector2( 18744, 544 )
-
-[node name="portal" type="Node2D" parent="."]
-
-[node name="Area2D" parent="portal" instance=ExtResource( 12 )]
-position = Vector2( 9320, 432 )
-
-[node name="Area2D2" parent="portal" instance=ExtResource( 12 )]
-position = Vector2( 11968, 56 )
-
-[node name="Area2D3" parent="portal" instance=ExtResource( 12 )]
-position = Vector2( 21120, 504 )
-
 [node name="HUD" parent="." instance=ExtResource( 16 )]
 
 [node name="Musica" parent="." instance=ExtResource( 17 )]
+
+[node name="Objetos" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="Objetos"]
+
+[node name="cono" parent="Objetos/Walls" instance=ExtResource( 11 )]
+position = Vector2( 264, 544 )
+
+[node name="Autum_wall" parent="Objetos/Walls" instance=ExtResource( 10 )]
+position = Vector2( 1816, 544 )
+
+[node name="Autum_wall2" parent="Objetos/Walls" instance=ExtResource( 10 )]
+position = Vector2( 6512, 544 )
+
+[node name="cono2" parent="Objetos/Walls" instance=ExtResource( 11 )]
+position = Vector2( 7224, 544 )
+
+[node name="Autum_wall3" parent="Objetos/Walls" instance=ExtResource( 10 )]
+position = Vector2( 13472, 536 )
+
+[node name="Autum_wall4" parent="Objetos/Walls" instance=ExtResource( 10 )]
+position = Vector2( 18744, 544 )
+
+[node name="portal" type="Node2D" parent="Objetos"]
+
+[node name="Area2D" parent="Objetos/portal" instance=ExtResource( 12 )]
+position = Vector2( 9320, 432 )
+
+[node name="Area2D2" parent="Objetos/portal" instance=ExtResource( 12 )]
+position = Vector2( 11968, 56 )
+
+[node name="Area2D3" parent="Objetos/portal" instance=ExtResource( 12 )]
+position = Vector2( 21120, 504 )
