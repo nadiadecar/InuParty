@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Second Background/Second background - All Tilesets.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Third Background/Brush 1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Third Background/bush 3.png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Third Background/Tree 1.png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Third Background/Brush 2.png" type="Texture" id=8]
+[ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Ground/Ground_frame.png" type="Texture" id=9]
 
 [node name="Background7" type="Node2D"]
 
@@ -120,3 +121,11 @@ texture = ExtResource( 6 )
 position = Vector2( 3250.25, 241.5 )
 scale = Vector2( 1.62397, 2.51527 )
 texture = ExtResource( 3 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 2900, 850 )
+texture = ExtResource( 9 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 6000, 400 )
