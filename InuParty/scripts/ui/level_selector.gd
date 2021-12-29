@@ -11,6 +11,7 @@ onready var level7_button = $VBoxContainer/GridContainer/level7
 onready var level8_button = $VBoxContainer/GridContainer/level8
 onready var tutorial_button = $VBoxContainer/tutorial
 onready var back_button = $VBoxContainer/back
+onready var dict_button = $DictionaryButton
 
 var _1
 
@@ -25,6 +26,7 @@ func _ready():
 	_1 = level8_button.connect("pressed", self, "on_level8_pressed")
 	_1 = tutorial_button.connect("pressed", self, "on_tutorial_pressed")
 	_1 = back_button.connect("pressed", self, "on_back_pressed")
+	_1 = dict_button.connect("pressed", self, "on_dict_pressed")
 
 
 func on_level1_pressed():
@@ -56,3 +58,6 @@ func on_tutorial_pressed():
 
 func on_back_pressed():
 	_1 = get_tree().change_scene("res://scenes/ui/main_menu.tscn")
+	
+func on_dict_pressed():
+	_1 = get_tree().change_scene("res://scenes/ui/dictionary.tscn")
