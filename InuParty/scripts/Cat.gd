@@ -5,10 +5,8 @@ var SPEED = 180
 var ACCELERATION = 1
 var GRAVITY = 400
 
-var NEAR_DISTANCE_THRESHOLD = 100
+var NEAR_DISTANCE_THRESHOLD = 50
 var FAR_DISTANCE_THRESHOLD = 1100
-
-var player_distance
 
 onready var playback = $AnimationTree.get("parameters/playback")
 onready var player = get_parent().get_node("Player")
@@ -24,11 +22,14 @@ func _physics_process(delta) -> void:
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
 	lineal_vel.y += GRAVITY * delta
 	
-	player_distance = abs(self.position.x - player.position.x)
-	#print("distancia perro y gato: ", player_distance)
-	if (player_distance < NEAR_DISTANCE_THRESHOLD):
-		#pass
-		get_tree().change_scene("res://scenes/ui/win_menu.tscn")
+	if (player.cat_plane and player.position.x >= self.position.x - NEAR_DISTANCE_THRESHOLD):
+		var winTimer = Timer.new()
+		winTimer.set_wait_time(4)
+		winTimer.connect("timeout", self, "_on_winTimer_timeout")
+		add_child(winTimer)
+		winTimer.start()
+		player.SPEED = 0
+		self.SPEED = 0
 		
 	if $RayCast2D.is_colliding():
 		var colObj = $RayCast2D.get_collider()
@@ -51,3 +52,6 @@ func _on_Timer_timeout():
 	SPEED = 180
 	var target_vel = 1
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
+
+func _on_winTimer_timeout():
+	get_tree().change_scene("res://scenes/ui/win_menu.tscn")
