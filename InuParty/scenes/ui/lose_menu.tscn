@@ -34,9 +34,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -633.355
-margin_top = 139.105
+margin_top = 30.105
 margin_right = 73.6446
-margin_bottom = 661.105
+margin_bottom = 552.105
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -58,6 +58,16 @@ margin_right = 706.0
 margin_bottom = 212.0
 custom_fonts/font = SubResource( 2 )
 text = "Restart level"
+
+[node name="BackMenu" type="Button" parent="VBoxContainer"]
+margin_top = 216.0
+margin_right = 706.0
+margin_bottom = 323.0
+custom_fonts/font = SubResource( 2 )
+text = "Back to Level Selector"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Fondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
