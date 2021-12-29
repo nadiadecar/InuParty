@@ -193,7 +193,7 @@ position = Vector2( 226.53, 89.4387 )
 position = Vector2( 232, 160 )
 
 [node name="TileMapGato2" type="TileMap" parent="."]
-position = Vector2( 0, 50 )
+position = Vector2( 0, 30 )
 scale = Vector2( 2.5, 2.5 )
 tile_set = SubResource( 3 )
 cell_size = Vector2( 16, 16 )
