@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/obstacles/forest_wall.png" type="Texture" id=1]
 [ext_resource path="res://scenes/obstacles/Wall.gd" type="Script" id=2]
+[ext_resource path="res://sprites/colors/verdecito.png" type="Texture" id=3]
+[ext_resource path="res://sprites/colors/brown.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.0952, 64 )
@@ -18,3 +20,19 @@ texture = ExtResource( 1 )
 position = Vector2( 0, -16 )
 scale = Vector2( 1.2, 0.9 )
 shape = SubResource( 1 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+visible = false
+margin_left = 32.0
+margin_top = -88.0
+margin_right = 77.0
+margin_bottom = -43.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
