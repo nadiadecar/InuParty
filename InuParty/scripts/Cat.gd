@@ -1,4 +1,5 @@
 extends KinematicBody2D
+export (Color) var color
 
 var lineal_vel = Vector2.ZERO
 var SPEED = 180
@@ -20,7 +21,7 @@ func _ready() -> void:
 
 func _physics_process(delta) -> void:
 	player_distance = self.position.x - player.position.x
-	get_parent().get_parent().get_node("HUD").get_node("LabelMeters").text = "Distance: " + String(round(player_distance)) + " meters"
+	get_parent().get_parent().get_node("HUD").get_node("LabelMeters").text = "Distance: " + String(round(player_distance)) + " cm"
 	if (player_distance >= FAR_DISTANCE_THRESHOLD):
 		get_tree().change_scene("res://scenes/ui/lose_menu.tscn")
 	

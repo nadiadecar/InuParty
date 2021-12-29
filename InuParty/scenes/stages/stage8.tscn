@@ -149,6 +149,7 @@ script = ExtResource( 4 )
 [node name="Cat" parent="." instance=ExtResource( 1 )]
 position = Vector2( 568, 200 )
 script = ExtResource( 5 )
+color = Color( 0.0862745, 0.188235, 0.235294, 1 )
 
 [node name="TileMapGato2" type="TileMap" parent="."]
 position = Vector2( 0, 70 )

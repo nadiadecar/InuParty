@@ -1,15 +1,20 @@
+DEVELOPERS
+Nadia Decar
+Vanessa Gaete
+Sebastián Zapata
+
 SOUNDS
-Bomb Explosion by Luke.RUSTLTD ( OpenGameArt )
-Wall Destruction by Michel Baradari ( OpenGameArt )
+Bomb Explosion by Luke.RUSTLTD (OpenGameArt)
+Wall Destruction by Michel Baradari (OpenGameArt)
 
 SPRITES
-Shiba Win Screen by atrieisan ( DeviantArt )
-Portal by Elthen ( Itch )
-Cat Sprite by Neoriceisgood ( DeviantArt )
-Shiba Sprite by Bouhm ( NexusMods )
+Shiba Win Screen by atrieisan (DeviantArt)
+Portal by Elthen (Itch)
+Cat Sprite by Neoriceisgood (DeviantArt)
+Shiba Sprite by Bouhm (NexusMods)
 Trees by lunarsignals (Itch)
 Walls by VectorPixelStar (Itch)
-Cone by ??? (Pinclipart)
+Cone (Pinclipart)
 
 ITEM SPRITES
 Thunder by pimen (Itch)
@@ -17,7 +22,7 @@ Water by pimen (Itch)
 Explosion animation by pimen (Itch)
 Bone by Kyrise (Itch)
 Thor's Hammer by buttyst (MinecraftPixelArtTemplates)
-Bomb by ??? (NicePNG)
+Bomb (NicePNG)
 
 BACKGROUNDS
 Pixel Skies - Level 1 background by Digital Moons (Itch)
@@ -35,6 +40,10 @@ Trasure Hunters by Pixel Frog (Itch)
 FONTS
 Avenue Pixel by jdjimenez ( Itch )
 
+
+SPECIAL THANKS TO
+Christopher Marín [Puntitowo]
+Elías Zelada [elixs]
 
 
 

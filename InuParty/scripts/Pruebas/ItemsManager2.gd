@@ -12,7 +12,7 @@ var actualItem
 onready var timer = $Timer
 const shaderTime = 0.5
 var hold
-
+export (Color) var color
 
 func _ready():
 	randomize()

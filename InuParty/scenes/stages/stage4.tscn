@@ -452,6 +452,7 @@ script = ExtResource( 9 )
 [node name="Cat" parent="." instance=ExtResource( 7 )]
 position = Vector2( 528, 128 )
 script = ExtResource( 8 )
+color = Color( 0.682353, 0.227451, 0.321569, 1 )
 
 [node name="Walls" type="Node2D" parent="."]
 
