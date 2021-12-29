@@ -508,8 +508,6 @@ position = Vector2( 76.748, 95.5211 )
 [node name="Holder" type="Node2D" parent="Game"]
 position = Vector2( 6.72519, 87.9261 )
 
-[node name="HUD" parent="." instance=ExtResource( 15 )]
-
 [node name="Background3" parent="." instance=ExtResource( 1 )]
 
 [node name="TileMapPerro" type="TileMap" parent="."]
@@ -565,5 +563,7 @@ script = ExtResource( 19 )
 [node name="portal2" parent="Node2D/portals" instance=ExtResource( 10 )]
 position = Vector2( 5008, 512 )
 script = ExtResource( 19 )
+
+[node name="HUD" parent="." instance=ExtResource( 15 )]
 
 [node name="Musica" parent="." instance=ExtResource( 14 )]
