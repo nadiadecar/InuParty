@@ -127,6 +127,7 @@ vframes = 3
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -2, 16 )
 shape = SubResource( 1 )
 

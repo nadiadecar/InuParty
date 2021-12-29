@@ -17,6 +17,7 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 100, 120 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -8 )
 shape = SubResource( 1 )
 
