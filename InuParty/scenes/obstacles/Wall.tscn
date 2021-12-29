@@ -20,8 +20,6 @@ region_rect = Rect2( 0, 0, 100, 120 )
 position = Vector2( 0, -8 )
 shape = SubResource( 1 )
 
-[node name="WallTimer" type="Timer" parent="."]
-
 [node name="TextureProgress" type="TextureProgress" parent="."]
 visible = false
 margin_left = 32.0

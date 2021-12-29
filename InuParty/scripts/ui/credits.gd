@@ -13,13 +13,12 @@ func _ready():
 	var text = f.get_as_text()
 	f.close()
 	creditsLabel.text = text
-	var numberOfLines = len(text.split("\n", true))
 	
 	back_button.connect("pressed", self, "on_back_pressed")
 	
-	tween.interpolate_property(creditsLabel, "rect_position",
-		Vector2(0, 750), Vector2(0, 700 - 120 * numberOfLines), 20,
-		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	tween.interpolate_property(creditsLabel, "rect_position:y",
+		750, -3550, 20,
+		Tween.TRANS_LINEAR)
 	tween.start()
 
 
