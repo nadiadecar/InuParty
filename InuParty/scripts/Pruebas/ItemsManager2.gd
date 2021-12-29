@@ -89,6 +89,19 @@ func _physics_process(_delta) -> void:
 		timer.set_wait_time( 0.05 )
 		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
+		
+		var first_collision = actualItem.first_collision
+		if not first_collision:
+			first_collision = true
+			var main_node = get_parent().get_parent()
+			if "objectType" in actualItem:
+				var actualType = actualItem.objectType
+				var efecto
+				if actualType == itemList[4]:
+					efecto = main_node.get_node("Thunder")
+				else:
+					efecto = main_node.get_node(actualType)
+				efecto.Autoplay()
 				
 #	if actualItem.get_node("RayCast2D").get_collider() != null:
 #		timer.set_wait_time( 1.5 )

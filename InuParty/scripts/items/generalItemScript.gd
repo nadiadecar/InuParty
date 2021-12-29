@@ -7,7 +7,7 @@ var plane = "cat"
 var holded = false
 var velocity = Vector2(0, 0)
 onready var timer = get_parent().get_node("Timer")
-var first_collision = true
+export var first_collision = true
 
 
 onready var animationPlayer = $AnimationPlayer

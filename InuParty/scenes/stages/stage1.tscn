@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Pruebas/Player2.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://sprites/Sound/Effects/rayo.ogg" type="AudioStream" id=21]
 [ext_resource path="res://sprites/Sound/Effects/saltito.ogg" type="AudioStream" id=22]
 [ext_resource path="res://sprites/Sound/Effects/portal.ogg" type="AudioStream" id=23]
+[ext_resource path="res://a.mp3" type="AudioStream" id=24]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -119,6 +120,9 @@ volume_db = -18.0
 stream = ExtResource( 19 )
 volume_db = -18.0
 
-[node name="Trueno" type="AudioStreamPlayer" parent="."]
+[node name="Thunder" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
 volume_db = -18.0
+
+[node name="Bone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
