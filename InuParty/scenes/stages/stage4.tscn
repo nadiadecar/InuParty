@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://scenes/Background4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=18]
 [ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=19]
 [ext_resource path="res://scenes/HolderBox.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scripts/current_stage.gd" type="Script" id=21]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 19 )
@@ -422,6 +423,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/z_index = 0
 
 [node name="stage4" type="Node2D"]
+script = ExtResource( 21 )
 
 [node name="Game" type="Node2D" parent="."]
 script = ExtResource( 15 )

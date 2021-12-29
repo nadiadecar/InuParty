@@ -453,6 +453,7 @@ __meta__ = {
 }
 
 [node name="DictionaryButton" type="TextureButton" parent="."]
+visible = false
 margin_left = 824.0
 margin_top = 507.0
 margin_right = 845.0
