@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/tutorial.gd" type="Script" id=1]
 [ext_resource path="res://fonts/AvenuePixel-Regular.ttf" type="DynamicFontData" id=2]
@@ -55,6 +55,38 @@ size = 48
 outline_size = 6
 outline_color = Color( 0.368627, 0.807843, 0.709804, 1 )
 font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=34]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TryPressingThem:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "parpadeo"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TryPressingThem:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -279,7 +311,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label9" type="Label" parent="."]
+[node name="TryPressingThem" type="Label" parent="."]
 margin_left = 1056.0
 margin_top = 64.0
 margin_right = 1223.0
@@ -292,6 +324,12 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../VBoxContainer")
+autoplay = "parpadeo"
+anims/RESET = SubResource( 34 )
+anims/parpadeo = SubResource( 35 )
 
 [node name="Fondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
