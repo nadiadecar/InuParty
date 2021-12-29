@@ -59,7 +59,8 @@ texture = ExtResource( 1 )
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
-position = Vector2( 1900, 800 )
+position = Vector2( 3686.59, 800 )
 texture = ExtResource( 6 )
+offset = Vector2( -1786.59, 0 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 4000, 300 )

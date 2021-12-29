@@ -164,7 +164,7 @@ position = Vector2( 848, 176 )
 script = ExtResource( 4 )
 color = Color( 0.184314, 0.129412, 0.231373, 1 )
 
-[node name="Player" parent="Game" instance=ExtResource( 2 )]
+[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
 position = Vector2( 176, 584 )
 script = ExtResource( 5 )
 

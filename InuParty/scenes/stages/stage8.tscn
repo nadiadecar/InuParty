@@ -159,7 +159,7 @@ script = ExtResource( 13 )
 [node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 14 )]
 current = true
 
-[node name="Player" parent="Game" instance=ExtResource( 2 )]
+[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
 position = Vector2( 96, 584 )
 script = ExtResource( 4 )
 
