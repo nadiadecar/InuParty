@@ -222,6 +222,7 @@ position = Vector2( -3.2, -7.6 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 hframes = 2
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Inu"]]
 position = Vector2( -1.60003, -4.80003 )
