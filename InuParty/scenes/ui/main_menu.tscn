@@ -140,7 +140,7 @@ position = Vector2( 16, -48 )
 position = Vector2( 104, 784 )
 shape = SubResource( 6 )
 
-[node name="Fondo" type="AudioStreamPlayer" parent="."]
+[node name="FondoST" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -20.0
 autoplay = true
