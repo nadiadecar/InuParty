@@ -7,15 +7,17 @@ Shiba Win Screen by atrieisan ( DeviantArt )
 Portal by Elthen ( Itch )
 Cat Sprite by Neoriceisgood ( DeviantArt )
 Shiba Sprite by Bouhm ( NexusMods )
-
-ITEMS
+Trees by lunarsignals (Itch)
 Walls by VectorPixelStar (Itch)
+Cone by ??? (Pinclipart)
+
+ITEM SPRITES
 Thunder by pimen (Itch)
 Water by pimen (Itch)
 Explosion animation by pimen (Itch)
 Bone by Kyrise (Itch)
-Trees by lunarsignals (Itch)
-
+Thor's Hammer by buttyst (MinecraftPixelArtTemplates)
+Bomb by ??? (NicePNG)
 
 BACKGROUNDS
 Pixel Skies - Level 1 background by Digital Moons (Itch)
@@ -24,9 +26,7 @@ Free Pixel Art Hills - Level 2 background by edermunizz (Itch)
 Parallax Sunset Mountains - Level 3 background by kayillustrations (Itch)
 Seasonal Tilesets - Level 4, 5, 6 background by GrafxKid (Itch)
 Sleeping beauty inspired forest - Level 7 background by dallie mond (Itch)
-DEmon woods parallax background - Level 8 background by Aethrall (Itch)
-
-
+Demon woods parallax background - Level 8 background by Aethrall (Itch)
 
 TILESETS
 Seasonal Tilesets by GrafxKid (Itch)
