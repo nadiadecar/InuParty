@@ -57,7 +57,7 @@ margin_top = 105.0
 margin_right = 706.0
 margin_bottom = 212.0
 custom_fonts/font = SubResource( 2 )
-text = "Restart level"
+text = "Continue"
 
 [node name="Fondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
