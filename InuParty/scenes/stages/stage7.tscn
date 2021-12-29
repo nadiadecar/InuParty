@@ -151,6 +151,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 2880, 32 )
 
 [node name="stage7" type="Node2D"]
 
@@ -166,7 +167,9 @@ position = Vector2( 848, 176 )
 script = ExtResource( 4 )
 color = Color( 0.184314, 0.129412, 0.231373, 1 )
 
-[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
+[node name="Player" parent="Game" groups=[
+"player",
+] instance=ExtResource( 2 )]
 position = Vector2( 176, 584 )
 script = ExtResource( 5 )
 
@@ -187,6 +190,7 @@ position = Vector2( 58.4696, 96.6996 )
 position = Vector2( 226.53, 89.4387 )
 
 [node name="Background7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232, 160 )
 
 [node name="TileMapGato2" type="TileMap" parent="."]
 position = Vector2( 0, 50 )
@@ -232,13 +236,6 @@ texture = ExtResource( 8 )
 [node name="Right corner bush" type="Sprite" parent="ParallaxBackground/ParallaxLayer6/Sprite"]
 position = Vector2( 885.818, 0.919067 )
 texture = ExtResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 960, 640 )
-scale = Vector2( 5000, 1 )
-shape = SubResource( 4 )
 
 [node name="walls" type="Node2D" parent="."]
 
@@ -307,3 +304,10 @@ position = Vector2( 25720, 88 )
 [node name="Musica" parent="." instance=ExtResource( 15 )]
 
 [node name="HUD" parent="." instance=ExtResource( 17 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 16, -15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 104, 680 )
+shape = SubResource( 4 )

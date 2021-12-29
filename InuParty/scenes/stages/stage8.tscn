@@ -162,7 +162,9 @@ script = ExtResource( 13 )
 position = Vector2( 638, 382.516 )
 current = true
 
-[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
+[node name="Player" parent="Game" groups=[
+"player",
+] instance=ExtResource( 2 )]
 position = Vector2( 96, 584 )
 script = ExtResource( 4 )
 
