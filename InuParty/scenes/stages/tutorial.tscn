@@ -174,12 +174,12 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 144, 0, 16, 16 )
 
-[node name="ENTER" type="Sprite" parent="."]
+[node name="ESCAPE" type="Sprite" parent="."]
 position = Vector2( 144, 648 )
 scale = Vector2( 5, 5 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 80, 64, 16, 16 )
+region_rect = Rect2( 64, 64, 16, 16 )
 
 [node name="SPACE" type="Sprite" parent="."]
 position = Vector2( 680, 648 )

@@ -73,6 +73,10 @@ __meta__ = {
 
 [node name="Popup" parent="." instance=ExtResource( 1 )]
 pause_mode = 2
+margin_left = 512.0
+margin_top = 200.0
+margin_right = 552.0
+margin_bottom = 240.0
 
 [node name="LabelMeters" type="Label" parent="."]
 margin_left = 1088.0

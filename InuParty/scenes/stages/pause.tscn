@@ -1,7 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/AvenuePixel-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/pause.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0.666667 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -23,11 +30,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -9.0
-margin_right = 271.0
-margin_bottom = 304.0
-color = Color( 0.65, 1, 0.970833, 1 )
+[node name="ColorRect" type="Panel" parent="."]
+margin_left = -20.0
+margin_top = -24.0
+margin_right = 280.0
+margin_bottom = 326.0
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

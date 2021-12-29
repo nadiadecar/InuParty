@@ -5,7 +5,7 @@ onready var left = $LeftRight/A
 onready var right = $LeftRight/D
 onready var up = $UpDown/W
 onready var down = $UpDown/S
-onready var enter = $ENTER
+onready var escape = $ESCAPE
 onready var space = $SPACE
 onready var fastfall = $I
 onready var nextitem = $O
@@ -13,7 +13,7 @@ onready var hold = $P
 
 onready var inputs = [["left_obj", left], ["right_obj", right], ["cat_plane", up],
 ["dog_plane", down], ["fast_fall", fastfall], ["change_obj", nextitem],
-["hold", hold], ["pause_game", enter], ["jump", space]]
+["hold", hold], ["pause_game", escape], ["jump", space]]
 
 var _1
 
