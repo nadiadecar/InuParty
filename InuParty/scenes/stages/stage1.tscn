@@ -14,7 +14,6 @@
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scripts/Portal.gd" type="Script" id=13]
 [ext_resource path="res://scripts/Pruebas/ItemsManager2.gd" type="Script" id=14]
-[ext_resource path="res://sprites/Sound/Background/Principal.ogg" type="AudioStream" id=15]
 [ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scripts/current_stage.gd" type="Script" id=16]
 
@@ -89,7 +88,6 @@ position = Vector2( 2704, 68 )
 pause_mode = 1
 
 [node name="MainAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 15 )
 volume_db = -2.0
 autoplay = true
 
