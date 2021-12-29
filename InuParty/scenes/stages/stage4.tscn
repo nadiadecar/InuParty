@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://scenes/Background4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" type="Texture" id=2]
@@ -13,6 +13,10 @@
 [ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/terrain_frame.png" type="Texture" id=13]
+[ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=15]
+[ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -465,15 +469,6 @@ texture = ExtResource( 13 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 8000, 405 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 96, 584 )
-script = ExtResource( 9 )
-
-[node name="Cat" parent="." instance=ExtResource( 7 )]
-position = Vector2( 528, 128 )
-script = ExtResource( 8 )
-color = Color( 0.682353, 0.227451, 0.321569, 1 )
-
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="cono" parent="Walls" instance=ExtResource( 11 )]
@@ -504,3 +499,22 @@ position = Vector2( 11968, 56 )
 
 [node name="Area2D3" parent="portal" instance=ExtResource( 12 )]
 position = Vector2( 21120, 504 )
+
+[node name="Game" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="Cat" parent="Game" instance=ExtResource( 7 )]
+position = Vector2( 528, 128 )
+script = ExtResource( 8 )
+color = Color( 0.682353, 0.227451, 0.321569, 1 )
+
+[node name="Player" parent="Game" instance=ExtResource( 6 )]
+position = Vector2( 96, 584 )
+script = ExtResource( 9 )
+
+[node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 14 )]
+current = true
+
+[node name="HUD" parent="." instance=ExtResource( 16 )]
+
+[node name="Musica" parent="." instance=ExtResource( 17 )]

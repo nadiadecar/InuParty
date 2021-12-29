@@ -86,9 +86,9 @@ func _physics_process(_delta) -> void:
 				hold.global_position.y = global_position.y
 				hold.holded = true
 		
-		#Se cambia el objeto que está cayendo 
-		timer.set_wait_time( 0.05 )
-		timer.start()
+			#Se cambia el objeto que está cayendo 
+			timer.set_wait_time( 0.05 )
+			timer.start()
 		
 		
 #	if actualItem.get_node("RayCast2D").get_collider() != null:
