@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/Background2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Tilesets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" type="Texture" id=8]
 [ext_resource path="res://sprites/Sunset/Foreground.png" type="Texture" id=9]
 [ext_resource path="res://sprites/Clouds/Cloud Tileset.png" type="Texture" id=10]
+[ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -385,6 +386,9 @@ position = Vector2( 12424, 560 )
 
 [node name="wall4" parent="obstacles/walls" instance=ExtResource( 3 )]
 position = Vector2( 30168, 560 )
+
+[node name="cono" parent="obstacles/walls" instance=ExtResource( 11 )]
+position = Vector2( 6904, 560 )
 
 [node name="portals" type="Node2D" parent="obstacles"]
 

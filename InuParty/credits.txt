@@ -5,9 +5,32 @@ Wall Destruction by Michel Baradari ( OpenGameArt )
 SPRITES
 Shiba Win Screen by atrieisan ( DeviantArt )
 Portal by Elthen ( Itch )
-https://www.deviantart.com/neoriceisgood/art/100-Cat-Sprites-804712407 - Neoriceisgood
-https://www.nexusmods.com/stardewvalley/mods/570 - Bouhm
-https://pixlr.com/stock/creator/stockunlimited - stockunlimited
+Cat Sprite by Neoriceisgood ( DeviantArt )
+Shiba Sprite by Bouhm ( NexusMods )
+Trees by lunarsignals (Itch)
+Walls by VectorPixelStar (Itch)
+Cone by ??? (Pinclipart)
+
+ITEM SPRITES
+Thunder by pimen (Itch)
+Water by pimen (Itch)
+Explosion animation by pimen (Itch)
+Bone by Kyrise (Itch)
+Thor's Hammer by buttyst (MinecraftPixelArtTemplates)
+Bomb by ??? (NicePNG)
+
+BACKGROUNDS
+Pixel Skies - Level 1 background by Digital Moons (Itch)
+Houses - Level 1 background by dallie mond (Itch)
+Free Pixel Art Hills - Level 2 background by edermunizz (Itch)
+Parallax Sunset Mountains - Level 3 background by kayillustrations (Itch)
+Seasonal Tilesets - Level 4, 5, 6 background by GrafxKid (Itch)
+Sleeping beauty inspired forest - Level 7 background by dallie mond (Itch)
+Demon woods parallax background - Level 8 background by Aethrall (Itch)
+
+TILESETS
+Seasonal Tilesets by GrafxKid (Itch)
+Trasure Hunters by Pixel Frog (Itch)
 
 FONTS
-https://jdjimenez.itch.io/avenue-pixel - jdjimenez
+Avenue Pixel by jdjimenez ( Itch )
