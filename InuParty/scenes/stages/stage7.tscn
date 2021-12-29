@@ -146,6 +146,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="Cat" parent="." instance=ExtResource( 3 )]
 position = Vector2( 848, 176 )
 script = ExtResource( 4 )
+color = Color( 0.184314, 0.129412, 0.231373, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 176, 584 )

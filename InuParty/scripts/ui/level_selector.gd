@@ -30,27 +30,35 @@ func _ready():
 
 
 func on_level1_pressed():
+	VisualServer.set_default_clear_color("419fd6")
 	_1 = get_tree().change_scene("res://scenes/stages/stage1.tscn")
 	
 func on_level2_pressed():
+	VisualServer.set_default_clear_color("f1f2d7")
 	_1 = get_tree().change_scene("res://scenes/stages/stage2.tscn")
 	
 func on_level3_pressed():
+	VisualServer.set_default_clear_color("fddfdc")
 	_1 = get_tree().change_scene("res://scenes/stages/stage3.tscn")
 	
 func on_level4_pressed():
+	VisualServer.set_default_clear_color("ae3a52")
 	_1 = get_tree().change_scene("res://scenes/stages/stage4.tscn")
 	
 func on_level5_pressed():
+	VisualServer.set_default_clear_color("fff9ff")
 	_1 = get_tree().change_scene("res://scenes/stages/stage5.tscn")
 
 func on_level6_pressed():
+	VisualServer.set_default_clear_color("50bbff")
 	_1 = get_tree().change_scene("res://scenes/stages/stage6.tscn")
 	
 func on_level7_pressed():
+	VisualServer.set_default_clear_color("2f213b")
 	_1 = get_tree().change_scene("res://scenes/stages/stage7.tscn")
 	
 func on_level8_pressed():
+	VisualServer.set_default_clear_color("16303c")
 	_1 = get_tree().change_scene("res://scenes/stages/stage8.tscn")
 	
 func on_tutorial_pressed():

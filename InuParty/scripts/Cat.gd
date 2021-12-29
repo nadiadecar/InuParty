@@ -1,4 +1,5 @@
 extends KinematicBody2D
+export (Color) var color
 
 var lineal_vel = Vector2.ZERO
 var SPEED = 180

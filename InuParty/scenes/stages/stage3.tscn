@@ -334,7 +334,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
-[node name="stage2" type="Node2D"]
+[node name="stage3" type="Node2D"]
 
 [node name="Background2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 80, 0 )
@@ -370,6 +370,7 @@ texture = ExtResource( 9 )
 [node name="Cat" parent="." instance=ExtResource( 4 )]
 position = Vector2( 528, 128 )
 script = ExtResource( 6 )
+color = Color( 0.992157, 0.87451, 0.862745, 1 )
 
 [node name="obstacles" type="Node2D" parent="."]
 

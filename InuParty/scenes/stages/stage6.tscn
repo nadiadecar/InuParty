@@ -475,6 +475,7 @@ script = ExtResource( 9 )
 [node name="Cat" parent="." instance=ExtResource( 12 )]
 position = Vector2( 848, 176 )
 script = ExtResource( 11 )
+color = Color( 0.313726, 0.733333, 1, 1 )
 
 [node name="ParallaxBackgroundFront" type="ParallaxBackground" parent="."]
 layer = 0
