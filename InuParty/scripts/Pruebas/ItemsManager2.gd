@@ -5,8 +5,8 @@ const Bomb = preload("res://scenes/items/bomb.tscn")
 const Bone = preload("res://scenes/items/Bone.tscn")
 const Thor = preload("res://scenes/items/objeto_thor.tscn")
 
-var itemDic = {"Thunder":Thunder, "Bomb":Bomb, "Water": Water, "Bone": Bone, "Thor":Thor}
-var itemList = ["Thunder","Bomb","Water","Bone","Thor"]
+var itemDic = {"Thunder":Thunder, "Bomb":Bomb, "Water": Water, "Bone": Bone}
+var itemList = ["Thunder","Bomb","Water","Bone"]
 
 var actualItem
 onready var timer = $Timer
@@ -15,9 +15,11 @@ var hold
 export (Color) var color
 
 func _ready():
+	timer.connect("timeout", self, "_on_Timer_timeout")
 	randomize()
 	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
+	actualItem.connect("collision",self,"admCollision")
 	actualItem.global_position = global_position
 	
 	var _twr = $ShaderColorH.connect("tween_completed", self, "_on_h_faded")
@@ -44,12 +46,10 @@ func _physics_process(_delta) -> void:
 	
 	if Input.is_action_just_pressed("fast_fall"):
 		timer.set_wait_time( 1.5 )
-		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
 		
 	if Input.is_action_just_pressed("change_obj"):
 		timer.set_wait_time( 0.05 )
-		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
 	
 	if Input.is_action_just_pressed("hold"):
@@ -63,6 +63,7 @@ func _physics_process(_delta) -> void:
 					self.remove_child(actualItem)
 					actualItem = itemDic[hold_helper].instance()
 					self.add_child(actualItem)
+					actualItem.connect("collision",self,"admCollision")
 					actualItem.position.x = camara.global_position.x
 					actualItem.global_position.y = global_position.y 
 					
@@ -87,33 +88,29 @@ func _physics_process(_delta) -> void:
 		
 		#Se cambia el objeto que está cayendo 
 		timer.set_wait_time( 0.05 )
-		timer.connect("timeout", self, "_on_Timer_timeout")
 		timer.start()
 		
-		var first_collision = actualItem.first_collision
-		if not first_collision:
-			first_collision = true
-			var main_node = get_parent().get_parent()
-			if "objectType" in actualItem:
-				var actualType = actualItem.objectType
-				var efecto
-				if actualType == itemList[4]:
-					efecto = main_node.get_node("Thunder")
-				else:
-					efecto = main_node.get_node(actualType)
-				efecto.Autoplay()
-				
+		
 #	if actualItem.get_node("RayCast2D").get_collider() != null:
 #		timer.set_wait_time( 1.5 )
 #		timer.connect("timeout", self, "_on_Timer_timeout")
 #		timer.start()
 #		print("jeje")
 		
+func admCollision():
+	var main_node = get_parent().get_parent()
+	if "objectType" in actualItem:
+		var actualType = actualItem.objectType
+		var efecto = main_node.get_node(actualType)
+		efecto.play()
+				
+
 func _on_Timer_timeout():
 	timer.stop()
 	self.remove_child(actualItem)
 	actualItem= itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
+	actualItem.connect("collision",self,"admCollision")
 	_set_Material_Shader_toSprite()
 	actualItem.position.x = get_parent().get_node("CamaraMultiObjetivos").global_position.x
 	actualItem.global_position.y = global_position.y

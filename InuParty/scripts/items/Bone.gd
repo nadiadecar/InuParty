@@ -7,6 +7,7 @@ func exec_collision():
 	if colObj.is_in_group("Inu"):
 		animationPlayer.play("Active")
 		first_col = false
+		emit_signal("collision")
 	else:
 		if first_col:
 			first_col = false

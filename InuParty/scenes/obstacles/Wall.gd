@@ -20,4 +20,6 @@ func _physics_process(delta):
 
 
 func _on_tween_completed():
+	get_parent().get_parent().get_parent().get_node("wall").play()
 	queue_free()
+	

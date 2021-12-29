@@ -23,6 +23,8 @@
 [ext_resource path="res://sprites/Sound/Effects/rayo.ogg" type="AudioStream" id=21]
 [ext_resource path="res://sprites/Sound/Effects/saltito.ogg" type="AudioStream" id=22]
 [ext_resource path="res://sprites/Sound/Effects/portal.ogg" type="AudioStream" id=23]
+[ext_resource path="res://sprites/Sound/Effects/hueso.ogg" type="AudioStream" id=24]
+
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -45,9 +47,7 @@ script = ExtResource( 9 )
 [node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 8 )]
 current = true
 
-[node name="Player" parent="Game" groups=[
-"player",
-] instance=ExtResource( 1 )]
+[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 1 )]
 position = Vector2( 79.6818, 101.682 )
 script = ExtResource( 2 )
 
@@ -124,4 +124,12 @@ volume_db = -18.0
 
 [node name="Trueno" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
+volume_db = -18.0
+
+[node name="Thor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -18.0
+
+[node name="Bone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
 volume_db = -18.0

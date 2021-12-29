@@ -8,7 +8,7 @@ var holded = false
 var velocity = Vector2(0, 0)
 onready var timer = get_parent().get_node("Timer")
 export var first_collision = true
-
+signal collision
 
 onready var animationPlayer = $AnimationPlayer
 
@@ -16,7 +16,6 @@ func _ready() -> void:
 	animationPlayer.play("Fall")
 	if is_instance_valid(timer):
 		timer.set_wait_time( 1.0 )
-		timer.connect("timeout", get_parent(), "_on_Timer_timeout")
 
 
 func _physics_process(delta) -> void:
@@ -50,3 +49,4 @@ func _physics_process(delta) -> void:
 		
 func exec_animation():
 	animationPlayer.play("Active")
+	emit_signal("collision")
