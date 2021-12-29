@@ -103,7 +103,6 @@ func admCollision():
 		var actualType = actualItem.objectType
 		var efecto = main_node.get_node(actualType)
 		efecto.play()
-				
 
 func _on_Timer_timeout():
 	timer.stop()
