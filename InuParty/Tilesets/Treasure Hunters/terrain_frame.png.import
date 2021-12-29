@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/terrain_frame.png-6fe6169ef5c14bb68faf7504458ef404.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://sprites/forest_tileset_lite/__MACOSX/forest_tileset_lite/Sprites/Background/._sky_cloud.png"
+source_file="res://Tilesets/Treasure Hunters/terrain_frame.png"
+dest_files=[ "res://.import/terrain_frame.png-6fe6169ef5c14bb68faf7504458ef404.stex" ]
+
 [params]
 
 compress/mode=0
@@ -14,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
@@ -25,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
