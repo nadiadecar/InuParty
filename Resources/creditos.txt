@@ -16,6 +16,12 @@ SELECT REDUCED ?pokemon ?alternatePokemon
     }
 
 
-bombita sonido: https://opengameart.org/content/bombexplosion8bit
-destrucción : https://opengameart.org/content/2-high-quality-explosions
-sonido de fondo:https://mit-mit-mit-mit.itch.io/a-year-to-remember-ost
+Sonidos: 
+
+bombita sonido: https://opengameart.org/content/synthesized-explosion
+destrucción (wall): https://opengameart.org/content/2-high-quality-explosions
+sonido de fondo :https://mit-mit-mit-mit.itch.io/a-year-to-remember-ost
+trueno (rayo): https://opengameart.org/content/rockbreaking
+splash (agua): https://opengameart.org/content/water-splashes
+saltito : https://opengameart.org/content/platformer-jumping-sounds
+portal : https://opengameart.org/content/portal-sound

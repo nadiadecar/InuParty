@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wall.ogg-4c540d3fab7ccadc22cacdd131d6e663.oggstr"
+
+[deps]
+
+source_file="res://sprites/Sound/Effects/wall.ogg"
+dest_files=[ "res://.import/wall.ogg-4c540d3fab7ccadc22cacdd131d6e663.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/saltito.ogg-cfb827dce18a3699c9c416c5e108b57f.oggstr"
+
+[deps]
+
+source_file="res://sprites/Sound/Effects/saltito.ogg"
+dest_files=[ "res://.import/saltito.ogg-cfb827dce18a3699c9c416c5e108b57f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
