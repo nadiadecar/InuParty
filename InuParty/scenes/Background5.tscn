@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" type="Texture" id=2]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" type="Texture" id=3]
+[ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/4 - Winter World/terrain_frame.png" type="Texture" id=4]
 
 [node name="Background5" type="Node2D"]
 
@@ -13,24 +14,38 @@ motion_scale = Vector2( 0.05, 1 )
 motion_mirroring = Vector2( 1030, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 574, 328 )
+position = Vector2( 1800, 328 )
 scale = Vector2( 4.125, 3.76923 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 900, 207 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1080, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 640, 296 )
+position = Vector2( 2000, 296 )
 scale = Vector2( 4.55556, 3.76923 )
 texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 900, 207 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 1080, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 528, 336 )
+position = Vector2( 1610, 336 )
 scale = Vector2( 3.75, 3.76923 )
 texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 900, 207 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 2900, 980 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 6000, 600 )
