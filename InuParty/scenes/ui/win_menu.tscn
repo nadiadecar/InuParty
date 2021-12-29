@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/AvenuePixel-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/ui/win_menu.gd" type="Script" id=2]
 [ext_resource path="res://others/shiba_inu_painted_by_atrieisan_d2uiqnr.jpg" type="Texture" id=3]
+[ext_resource path="res://sprites/Sound/Background/win.ogg" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 96
@@ -57,3 +58,8 @@ margin_right = 706.0
 margin_bottom = 212.0
 custom_fonts/font = SubResource( 2 )
 text = "Reiniciar"
+
+[node name="Fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+autoplay = true

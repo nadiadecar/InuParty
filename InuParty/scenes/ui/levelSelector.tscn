@@ -449,5 +449,5 @@ __meta__ = {
 
 [node name="Fondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -5.0
+volume_db = -20.0
 autoplay = true
