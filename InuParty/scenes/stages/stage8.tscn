@@ -157,6 +157,7 @@ extents = Vector2( 2880, 32 )
 script = ExtResource( 13 )
 
 [node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 14 )]
+position = Vector2( 638, 382.516 )
 current = true
 
 [node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
@@ -170,7 +171,7 @@ color = Color( 0.0862745, 0.188235, 0.235294, 1 )
 
 [node name="Items" type="Node2D" parent="Game"]
 material = SubResource( 1 )
-position = Vector2( 0, -375.063 )
+position = Vector2( 316.534, 116.575 )
 script = ExtResource( 10 )
 color = Color( 0.254902, 0.623529, 0.839216, 1 )
 
@@ -180,9 +181,6 @@ color = Color( 0.254902, 0.623529, 0.839216, 1 )
 
 [node name="HolderBox" parent="Game" instance=ExtResource( 16 )]
 position = Vector2( 58.4696, 96.6996 )
-
-[node name="Holder" type="Node2D" parent="Game"]
-position = Vector2( 226.53, 89.4387 )
 
 [node name="Background8" parent="." instance=ExtResource( 3 )]
 
@@ -292,5 +290,8 @@ position = Vector2( 23700, 584 )
 position = Vector2( 25080, 528 )
 
 [node name="Musica" parent="." instance=ExtResource( 12 )]
+
+[node name="Holder" type="Node2D" parent="."]
+position = Vector2( 226.53, 89.4387 )
 
 [node name="HUD" parent="." instance=ExtResource( 15 )]

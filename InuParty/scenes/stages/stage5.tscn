@@ -427,6 +427,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 script = ExtResource( 17 )
 
 [node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 19 )]
+position = Vector2( 632.96, 328.369 )
 current = true
 
 [node name="Player" parent="Game" groups=["player"] instance=ExtResource( 1 )]
@@ -440,7 +441,7 @@ color = Color( 1, 0.976471, 1, 1 )
 
 [node name="Items" type="Node2D" parent="Game"]
 material = SubResource( 1 )
-position = Vector2( 0, -375.063 )
+position = Vector2( 463.651, 78.5086 )
 script = ExtResource( 15 )
 color = Color( 0.254902, 0.623529, 0.839216, 1 )
 
