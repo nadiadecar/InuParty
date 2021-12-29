@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SeleccionarNiveles.ogg-a13fa8561d94f5f9df72c396315bf6d2.oggstr"
+
+[deps]
+
+source_file="res://sprites/Sound/Background/SeleccionarNiveles.ogg"
+dest_files=[ "res://.import/SeleccionarNiveles.ogg-a13fa8561d94f5f9df72c396315bf6d2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=2.5

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ComoJugar.ogg-c7222c8a6d567da5c43abc70fb5ccf77.oggstr"
+
+[deps]
+
+source_file="res://sprites/Sound/Background/ComoJugar.ogg"
+dest_files=[ "res://.import/ComoJugar.ogg-c7222c8a6d567da5c43abc70fb5ccf77.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

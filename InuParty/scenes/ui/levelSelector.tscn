@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://fonts/AvenuePixel-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sprites/sky/Free DEMO Pixel Skies Background pack by Digital Moons/Pixel Skies 1920x1080px (Full HD)/demo01_PixelSky_1920x1080.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/_Complete_static_BG_(288 x 208).png" type="Texture" id=8]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Setting.png" type="Texture" id=9]
 [ext_resource path="res://Tilesets/parallax_demon_woods_pack/Captura.PNG" type="Texture" id=10]
+[ext_resource path="res://sprites/Sound/Background/SeleccionarNiveles.ogg" type="AudioStream" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -445,3 +446,8 @@ text = "BACK"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="Fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -5.0
+autoplay = true
