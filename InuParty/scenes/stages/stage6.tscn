@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/macetero.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" type="Texture" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://scripts/Game.gd" type="Script" id=20]
 [ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/HolderBox.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 19 )
@@ -461,6 +463,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="level6" type="Node2D"]
 
+[node name="HUD" parent="." instance=ExtResource( 23 )]
+
 [node name="Musica" parent="." instance=ExtResource( 21 )]
 
 [node name="Game" type="Node2D" parent="."]
@@ -487,6 +491,12 @@ color = Color( 0.254902, 0.623529, 0.839216, 1 )
 [node name="Timer" type="Timer" parent="Game/Items"]
 
 [node name="ShaderColorH" type="Tween" parent="Game/Items"]
+
+[node name="HolderBox" parent="Game" instance=ExtResource( 24 )]
+position = Vector2( 58.4696, 96.6996 )
+
+[node name="Holder" type="Node2D" parent="Game"]
+position = Vector2( 226.53, 89.4387 )
 
 [node name="Background6" parent="." instance=ExtResource( 16 )]
 

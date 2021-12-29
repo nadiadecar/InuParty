@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=13]
 [ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/HolderBox.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 11 )
@@ -176,6 +178,12 @@ color = Color( 0.254902, 0.623529, 0.839216, 1 )
 
 [node name="ShaderColorH" type="Tween" parent="Game/Items"]
 
+[node name="HolderBox" parent="Game" instance=ExtResource( 16 )]
+position = Vector2( 58.4696, 96.6996 )
+
+[node name="Holder" type="Node2D" parent="Game"]
+position = Vector2( 226.53, 89.4387 )
+
 [node name="Background8" parent="." instance=ExtResource( 3 )]
 
 [node name="TileMapGato2" type="TileMap" parent="."]
@@ -284,3 +292,5 @@ position = Vector2( 23700, 584 )
 position = Vector2( 25080, 528 )
 
 [node name="Musica" parent="." instance=ExtResource( 12 )]
+
+[node name="HUD" parent="." instance=ExtResource( 15 )]
