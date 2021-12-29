@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/3 - Cloud_cover_1.png-0165eff2ae08d91d8127de164049aeb9.stex"
+path="res://.import/terrain_frame.png-6fe6169ef5c14bb68faf7504458ef404.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png"
-dest_files=[ "res://.import/3 - Cloud_cover_1.png-0165eff2ae08d91d8127de164049aeb9.stex" ]
+source_file="res://Tilesets/Treasure Hunters/terrain_frame.png"
+dest_files=[ "res://.import/terrain_frame.png-6fe6169ef5c14bb68faf7504458ef404.stex" ]
 
 [params]
 
