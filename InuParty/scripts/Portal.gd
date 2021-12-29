@@ -15,4 +15,4 @@ func _on_body_entered(body : KinematicBody2D):
 	if body.is_in_group("player"):
 		print("Jugador toca el portal")
 		body.change_plane()
-		get_parent().get_parent().get_parent().get_node("portal").play()
+		get_parent().get_parent().get_parent().get_node("Musica/portal").play()

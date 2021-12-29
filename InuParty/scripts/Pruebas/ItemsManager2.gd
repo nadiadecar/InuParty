@@ -98,7 +98,7 @@ func _physics_process(_delta) -> void:
 #		print("jeje")
 		
 func admCollision():
-	var main_node = get_parent().get_parent()
+	var main_node = get_parent().get_parent().get_node("Musica")
 	if "objectType" in actualItem:
 		var actualType = actualItem.objectType
 		var efecto = main_node.get_node(actualType)

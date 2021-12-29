@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://sprites/Sound/Background/FondoPrincipal.ogg" type="AudioStream" id=1]
+[ext_resource path="res://sprites/Sound/Effects/wall.ogg" type="AudioStream" id=2]
+[ext_resource path="res://sprites/Sound/Effects/bomba.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sprites/Sound/Effects/agua.ogg" type="AudioStream" id=4]
+[ext_resource path="res://sprites/Sound/Effects/portal.ogg" type="AudioStream" id=5]
+[ext_resource path="res://sprites/Sound/Effects/rayo.ogg" type="AudioStream" id=6]
+[ext_resource path="res://sprites/Sound/Effects/saltito.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sprites/Sound/Effects/hueso.ogg" type="AudioStream" id=8]
+
+[node name="Musica" type="Node"]
+
+[node name="MainAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -20.0
+autoplay = true
+
+[node name="wall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -18.0
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -18.0
+
+[node name="portal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -18.0
+
+[node name="Water" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -18.0
+
+[node name="Bomb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -18.0
+
+[node name="Thunder" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -18.0
+
+[node name="Thor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -18.0
+
+[node name="Bone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -18.0

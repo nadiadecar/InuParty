@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://scenes/Background3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" type="Texture" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://scenes/obstacles/Forest_wall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=12]
+[ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/stages/HUD.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -461,6 +465,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/z_index = 0
 
 [node name="stage 2" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="HUD" parent="." instance=ExtResource( 15 )]
+
+[node name="CamaraMultiObjetivos" parent="." instance=ExtResource( 13 )]
 
 [node name="Background3" parent="." instance=ExtResource( 1 )]
 
@@ -523,3 +532,5 @@ position = Vector2( 18672, 504 )
 
 [node name="portal2" parent="Node2D/portals" instance=ExtResource( 10 )]
 position = Vector2( 5008, 512 )
+
+[node name="Musica" parent="." instance=ExtResource( 14 )]

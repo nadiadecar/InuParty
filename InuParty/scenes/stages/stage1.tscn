@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/Pruebas/Player2.gd" type="Script" id=2]
@@ -16,14 +16,7 @@
 [ext_resource path="res://scripts/Pruebas/ItemsManager2.gd" type="Script" id=14]
 [ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scripts/current_stage.gd" type="Script" id=16]
-[ext_resource path="res://sprites/Sound/Background/FondoPrincipal.ogg" type="AudioStream" id=17]
-[ext_resource path="res://sprites/Sound/Effects/wall.ogg" type="AudioStream" id=18]
-[ext_resource path="res://sprites/Sound/Effects/bomba.ogg" type="AudioStream" id=19]
-[ext_resource path="res://sprites/Sound/Effects/agua.ogg" type="AudioStream" id=20]
-[ext_resource path="res://sprites/Sound/Effects/rayo.ogg" type="AudioStream" id=21]
-[ext_resource path="res://sprites/Sound/Effects/saltito.ogg" type="AudioStream" id=22]
-[ext_resource path="res://sprites/Sound/Effects/portal.ogg" type="AudioStream" id=23]
-[ext_resource path="res://sprites/Sound/Effects/hueso.ogg" type="AudioStream" id=24]
+[ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 7 )
@@ -96,39 +89,4 @@ position = Vector2( 2704, 68 )
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 pause_mode = 1
 
-[node name="MainAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 17 )
-volume_db = -20.0
-autoplay = true
-
-[node name="wall" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
-volume_db = -18.0
-
-[node name="jump" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 22 )
-volume_db = -18.0
-
-[node name="portal" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 23 )
-volume_db = -18.0
-
-[node name="Water" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 20 )
-volume_db = -18.0
-
-[node name="Bomb" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 19 )
-volume_db = -18.0
-
-[node name="Trueno" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 21 )
-volume_db = -18.0
-
-[node name="Thor" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 21 )
-volume_db = -18.0
-
-[node name="Bone" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 24 )
-volume_db = -18.0
+[node name="Musica" parent="." instance=ExtResource( 17 )]
