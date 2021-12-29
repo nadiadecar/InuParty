@@ -471,6 +471,8 @@ position = Vector2( 0, -128 )
 scale = Vector2( 4.5, 5.44815 )
 texture = ExtResource( 16 )
 centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 960, 135 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.15, 1 )
@@ -481,6 +483,8 @@ position = Vector2( 0, -40 )
 scale = Vector2( 4.5, 4.7963 )
 texture = ExtResource( 15 )
 centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 960, 135 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
@@ -491,6 +495,8 @@ position = Vector2( 0, -152 )
 scale = Vector2( 4.5, 5.62593 )
 texture = ExtResource( 14 )
 centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 960, 135 )
 
 [node name="cerco" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.65, 1 )
