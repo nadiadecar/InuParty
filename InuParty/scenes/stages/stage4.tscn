@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://scenes/Background4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://scenes/obstacles/Autum_wall.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/obstacles/cono.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/2 - Autumn Forest/terrain_frame.png" type="Texture" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -429,21 +430,40 @@ layer = 0
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 1200, 0 )
+motion_mirroring = Vector2( 2400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
 position = Vector2( 540, 256 )
 scale = Vector2( 4.19444, 3.69231 )
 texture = ExtResource( 2 )
 
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 1744, 256 )
+scale = Vector2( 4.19444, 3.69231 )
+texture = ExtResource( 2 )
+
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 1200, 0 )
+motion_mirroring = Vector2( 2400, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
 position = Vector2( 540, 260 )
 scale = Vector2( 4.19444, 3.80769 )
 texture = ExtResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 1744, 260 )
+scale = Vector2( 4.19444, 3.80769 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3200, 850 )
+scale = Vector2( 0.888889, 1 )
+texture = ExtResource( 13 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 8000, 405 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 96, 584 )
