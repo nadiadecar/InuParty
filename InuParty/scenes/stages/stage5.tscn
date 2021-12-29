@@ -518,52 +518,54 @@ position = Vector2( 22.1109, 21.3341 )
 scale = Vector2( 0.936791, 0.592025 )
 texture = ExtResource( 9 )
 
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="Node2D" parent="Walls" instance=ExtResource( 13 )]
-position = Vector2( 488, 584 )
-
-[node name="Node2D2" parent="Walls" instance=ExtResource( 13 )]
-position = Vector2( 768, 576 )
-
-[node name="Autum_wall" parent="Walls" instance=ExtResource( 12 )]
-position = Vector2( 1672, 608 )
-
-[node name="Node2D3" parent="Walls" instance=ExtResource( 13 )]
-position = Vector2( 3824, 584 )
-
-[node name="Autum_wall2" parent="Walls" instance=ExtResource( 12 )]
-position = Vector2( 5856, 584 )
-
-[node name="Autum_wall3" parent="Walls" instance=ExtResource( 12 )]
-position = Vector2( 9096, 584 )
-
-[node name="Node2D4" parent="Walls" instance=ExtResource( 13 )]
-position = Vector2( 16120, 584 )
-
-[node name="Node2D5" parent="Walls" instance=ExtResource( 13 )]
-position = Vector2( 19616, 584 )
-
-[node name="Autum_wall4" parent="Walls" instance=ExtResource( 12 )]
-position = Vector2( 24112, 576 )
-
-[node name="portal" type="Node2D" parent="."]
-
-[node name="Area2D3" parent="portal" instance=ExtResource( 11 )]
-position = Vector2( 10352, 512 )
-
-[node name="Area2D" parent="portal" instance=ExtResource( 11 )]
-position = Vector2( 1904, 536 )
-
-[node name="Area2D2" parent="portal" instance=ExtResource( 11 )]
-position = Vector2( 3264, 112 )
-
-[node name="Area2D4" parent="portal" instance=ExtResource( 11 )]
-position = Vector2( 15680, 112 )
-
-[node name="Area2D5" parent="portal" instance=ExtResource( 11 )]
-position = Vector2( 27064, 536 )
-
 [node name="Musica" parent="." instance=ExtResource( 18 )]
 
 [node name="HUD" parent="." instance=ExtResource( 20 )]
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Walls" type="Node2D" parent="Obstacles"]
+
+[node name="Node2D" parent="Obstacles/Walls" instance=ExtResource( 13 )]
+position = Vector2( 488, 584 )
+
+[node name="Node2D2" parent="Obstacles/Walls" instance=ExtResource( 13 )]
+position = Vector2( 768, 576 )
+
+[node name="Autum_wall" parent="Obstacles/Walls" instance=ExtResource( 12 )]
+position = Vector2( 1672, 608 )
+
+[node name="Node2D3" parent="Obstacles/Walls" instance=ExtResource( 13 )]
+position = Vector2( 3824, 584 )
+
+[node name="Autum_wall2" parent="Obstacles/Walls" instance=ExtResource( 12 )]
+position = Vector2( 5856, 584 )
+
+[node name="Autum_wall3" parent="Obstacles/Walls" instance=ExtResource( 12 )]
+position = Vector2( 9096, 584 )
+
+[node name="Node2D4" parent="Obstacles/Walls" instance=ExtResource( 13 )]
+position = Vector2( 16120, 584 )
+
+[node name="Node2D5" parent="Obstacles/Walls" instance=ExtResource( 13 )]
+position = Vector2( 19616, 584 )
+
+[node name="Autum_wall4" parent="Obstacles/Walls" instance=ExtResource( 12 )]
+position = Vector2( 24112, 576 )
+
+[node name="portal" type="Node2D" parent="Obstacles"]
+
+[node name="Area2D3" parent="Obstacles/portal" instance=ExtResource( 11 )]
+position = Vector2( 10352, 512 )
+
+[node name="Area2D" parent="Obstacles/portal" instance=ExtResource( 11 )]
+position = Vector2( 1904, 536 )
+
+[node name="Area2D2" parent="Obstacles/portal" instance=ExtResource( 11 )]
+position = Vector2( 3264, 112 )
+
+[node name="Area2D4" parent="Obstacles/portal" instance=ExtResource( 11 )]
+position = Vector2( 15680, 112 )
+
+[node name="Area2D5" parent="Obstacles/portal" instance=ExtResource( 11 )]
+position = Vector2( 27064, 536 )
