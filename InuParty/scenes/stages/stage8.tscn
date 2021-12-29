@@ -162,9 +162,7 @@ script = ExtResource( 13 )
 position = Vector2( 638, 382.516 )
 current = true
 
-[node name="Player" parent="Game" groups=[
-"player",
-] instance=ExtResource( 2 )]
+[node name="Player" parent="Game" groups=["player"] instance=ExtResource( 2 )]
 position = Vector2( 96, 584 )
 script = ExtResource( 4 )
 
@@ -214,88 +212,90 @@ position = Vector2( 16, -48 )
 position = Vector2( 104, 680 )
 shape = SubResource( 4 )
 
-[node name="walls" type="Node2D" parent="."]
-
-[node name="KinematicBody2D" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 304, 552 )
-
-[node name="KinematicBody2D2" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 1000, 552 )
-
-[node name="KinematicBody2D3" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 1500, 552 )
-
-[node name="KinematicBody2D4" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 3000, 552 )
-
-[node name="KinematicBody2D5" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 3300, 552 )
-
-[node name="KinematicBody2D6" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 4000, 552 )
-
-[node name="KinematicBody2D7" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 4900, 552 )
-
-[node name="KinematicBody2D8" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 6500, 552 )
-
-[node name="KinematicBody2D9" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 6800, 552 )
-
-[node name="KinematicBody2D10" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 8000, 552 )
-
-[node name="KinematicBody2D11" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 8800, 552 )
-
-[node name="KinematicBody2D12" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 10500, 552 )
-
-[node name="KinematicBody2D13" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 12800, 552 )
-
-[node name="KinematicBody2D14" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 14300, 552 )
-
-[node name="KinematicBody2D15" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 16000, 552 )
-
-[node name="KinematicBody2D16" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 16500, 552 )
-
-[node name="KinematicBody2D17" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 16800, 552 )
-
-[node name="KinematicBody2D18" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 18000, 552 )
-
-[node name="KinematicBody2D19" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 19500, 552 )
-
-[node name="KinematicBody2D20" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 21000, 552 )
-
-[node name="KinematicBody2D21" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 21200, 552 )
-
-[node name="KinematicBody2D22" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 21400, 552 )
-
-[node name="KinematicBody2D23" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 23056, 552 )
-
-[node name="KinematicBody2D24" parent="walls" instance=ExtResource( 8 )]
-position = Vector2( 23700, 552 )
-
-[node name="portals" type="Node2D" parent="."]
-
-[node name="Area2D" parent="portals" instance=ExtResource( 9 )]
-position = Vector2( 25080, 528 )
-
 [node name="Musica" parent="." instance=ExtResource( 12 )]
 
 [node name="Holder" type="Node2D" parent="."]
 position = Vector2( 226.53, 89.4387 )
 
 [node name="HUD" parent="." instance=ExtResource( 15 )]
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="portals" type="Node2D" parent="Obstacles"]
+
+[node name="Area2D" parent="Obstacles/portals" instance=ExtResource( 9 )]
+position = Vector2( 25080, 528 )
+
+[node name="walls" type="Node2D" parent="Obstacles"]
+
+[node name="KinematicBody2D" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 304, 552 )
+
+[node name="KinematicBody2D2" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 1000, 552 )
+
+[node name="KinematicBody2D3" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 1500, 552 )
+
+[node name="KinematicBody2D4" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 3000, 552 )
+
+[node name="KinematicBody2D5" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 3300, 552 )
+
+[node name="KinematicBody2D6" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 4000, 552 )
+
+[node name="KinematicBody2D7" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 4900, 552 )
+
+[node name="KinematicBody2D8" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 6500, 552 )
+
+[node name="KinematicBody2D9" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 6800, 552 )
+
+[node name="KinematicBody2D10" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 8000, 552 )
+
+[node name="KinematicBody2D11" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 8800, 552 )
+
+[node name="KinematicBody2D12" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 10500, 552 )
+
+[node name="KinematicBody2D13" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 12800, 552 )
+
+[node name="KinematicBody2D14" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 14300, 552 )
+
+[node name="KinematicBody2D15" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 16000, 552 )
+
+[node name="KinematicBody2D16" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 16500, 552 )
+
+[node name="KinematicBody2D17" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 16800, 552 )
+
+[node name="KinematicBody2D18" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 18000, 552 )
+
+[node name="KinematicBody2D19" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 19500, 552 )
+
+[node name="KinematicBody2D20" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 21000, 552 )
+
+[node name="KinematicBody2D21" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 21200, 552 )
+
+[node name="KinematicBody2D22" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 21400, 552 )
+
+[node name="KinematicBody2D23" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 23056, 552 )
+
+[node name="KinematicBody2D24" parent="Obstacles/walls" instance=ExtResource( 8 )]
+position = Vector2( 23700, 552 )
