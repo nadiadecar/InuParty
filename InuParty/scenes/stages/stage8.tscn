@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://scripts/Cat.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Clouds/Cloud Tileset.png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" type="Texture" id=7]
+[ext_resource path="res://scenes/obstacles/Forest_wall.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Portal.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -173,3 +175,82 @@ position = Vector2( 16, -48 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 104, 680 )
 shape = SubResource( 3 )
+
+[node name="walls" type="Node2D" parent="."]
+
+[node name="KinematicBody2D" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 304, 584 )
+
+[node name="KinematicBody2D2" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 1000, 584 )
+
+[node name="KinematicBody2D3" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 1500, 584 )
+
+[node name="KinematicBody2D4" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 3000, 584 )
+
+[node name="KinematicBody2D5" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 3300, 584 )
+
+[node name="KinematicBody2D6" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 4000, 584 )
+
+[node name="KinematicBody2D7" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 4900, 584 )
+
+[node name="KinematicBody2D8" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 6500, 584 )
+
+[node name="KinematicBody2D9" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 6800, 584 )
+
+[node name="KinematicBody2D10" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 8000, 584 )
+
+[node name="KinematicBody2D11" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 8800, 584 )
+
+[node name="KinematicBody2D12" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 10500, 584 )
+
+[node name="KinematicBody2D13" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 12800, 584 )
+
+[node name="KinematicBody2D14" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 14300, 584 )
+
+[node name="KinematicBody2D15" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 16000, 584 )
+
+[node name="KinematicBody2D16" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 16500, 584 )
+
+[node name="KinematicBody2D17" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 16800, 584 )
+
+[node name="KinematicBody2D18" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 18000, 584 )
+
+[node name="KinematicBody2D19" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 19500, 584 )
+
+[node name="KinematicBody2D20" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 21000, 584 )
+
+[node name="KinematicBody2D21" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 21200, 584 )
+
+[node name="KinematicBody2D22" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 21400, 584 )
+
+[node name="KinematicBody2D23" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 23056, 584 )
+
+[node name="KinematicBody2D24" parent="walls" instance=ExtResource( 8 )]
+position = Vector2( 23700, 584 )
+
+[node name="portals" type="Node2D" parent="."]
+
+[node name="Area2D" parent="portals" instance=ExtResource( 9 )]
+position = Vector2( 25080, 528 )
