@@ -15,6 +15,7 @@ var hold
 
 
 func _ready():
+	randomize()
 	actualItem = itemDic[itemList[randi() % itemList.size()]].instance()
 	self.add_child(actualItem)
 	actualItem.global_position = global_position

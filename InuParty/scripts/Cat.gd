@@ -6,7 +6,9 @@ var ACCELERATION = 1
 var GRAVITY = 400
 
 var NEAR_DISTANCE_THRESHOLD = 50
-var FAR_DISTANCE_THRESHOLD = 1100
+var FAR_DISTANCE_THRESHOLD = 2200
+
+var player_distance
 
 onready var playback = $AnimationTree.get("parameters/playback")
 onready var player = get_parent().get_node("Player")
@@ -17,6 +19,11 @@ func _ready() -> void:
 	get_node("AnimationPlayer")
 
 func _physics_process(delta) -> void:
+	player_distance = self.position.x - player.position.x
+	get_parent().get_parent().get_node("HUD").get_node("LabelMeters").text = "Distance: " + String(round(player_distance)) + " meters"
+	if (player_distance >= FAR_DISTANCE_THRESHOLD):
+		get_tree().change_scene("res://scenes/ui/lose_menu.tscn")
+	
 	lineal_vel = move_and_slide(lineal_vel, Vector2.UP)
 	var target_vel = 1
 	lineal_vel.x = move_toward(lineal_vel.x, target_vel * SPEED, ACCELERATION)
