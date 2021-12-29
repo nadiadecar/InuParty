@@ -1,10 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Background7.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Cat.gd" type="Script" id=4]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=5]
+[ext_resource path="res://scripts/Pruebas/Player2.gd" type="Script" id=5]
 [ext_resource path="res://sprites/Clouds/Cloud Tileset.png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Ground/Trees.png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/Sleeping Beauty Inspired Background/Layers/Foreground/Left corner bush.png" type="Texture" id=8]
@@ -13,6 +13,9 @@
 [ext_resource path="res://scenes/obstacles/Forest_wall.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scripts/Pruebas/ItemsManager2.gd" type="Script" id=12]
 [ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=13]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 13 )
@@ -150,6 +153,9 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [node name="stage7" type="Node2D"]
 
 [node name="Game" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 16 )]
 
 [node name="Cat" parent="Game" instance=ExtResource( 3 )]
 position = Vector2( 848, 176 )
@@ -287,3 +293,5 @@ position = Vector2( 23000, 520 )
 
 [node name="Area2D6" parent="portals" instance=ExtResource( 10 )]
 position = Vector2( 25720, 88 )
+
+[node name="Musica" parent="." instance=ExtResource( 15 )]

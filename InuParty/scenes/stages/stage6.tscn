@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/macetero.png" type="Texture" id=1]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/3 - Tropics/Terrain (16 x 16).png" type="Texture" id=6]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/5 - Misc. universal tiles/Flowers (16 x 16).png" type="Texture" id=7]
 [ext_resource path="res://Tilesets/Seasonal Tilesets/Seasonal Tilesets/1 - Grassland/pino (16 x 16).png" type="Texture" id=8]
-[ext_resource path="res://scripts/Player.gd" type="Script" id=9]
+[ext_resource path="res://scripts/Pruebas/Player2.gd" type="Script" id=9]
 [ext_resource path="res://scenes/obstacles/Wall.gd" type="Script" id=10]
 [ext_resource path="res://scripts/Cat.gd" type="Script" id=11]
 [ext_resource path="res://scenes/Cat.tscn" type="PackedScene" id=12]
@@ -19,6 +19,9 @@
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scripts/Pruebas/ItemsManager2.gd" type="Script" id=18]
 [ext_resource path="res://shaders/color_outline.gdshader" type="Shader" id=19]
+[ext_resource path="res://scripts/Game.gd" type="Script" id=20]
+[ext_resource path="res://scenes/Musica.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Camara.tscn" type="PackedScene" id=22]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 19 )
@@ -458,7 +461,13 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [node name="level6" type="Node2D"]
 
+[node name="Musica" parent="." instance=ExtResource( 21 )]
+
 [node name="Game" type="Node2D" parent="."]
+script = ExtResource( 20 )
+
+[node name="CamaraMultiObjetivos" parent="Game" instance=ExtResource( 22 )]
+current = true
 
 [node name="Player" parent="Game" instance=ExtResource( 17 )]
 position = Vector2( 176, 536 )
