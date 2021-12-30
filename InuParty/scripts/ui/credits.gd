@@ -17,7 +17,7 @@ func _ready():
 	back_button.connect("pressed", self, "on_back_pressed")
 	
 	tween.interpolate_property(creditsLabel, "rect_position:y",
-		750, -3550, 20,
+		750, -4500, 22,
 		Tween.TRANS_LINEAR)
 	tween.start()
 

@@ -6,7 +6,7 @@ onready var label = $Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.wait_time = 120
+	timer.wait_time = 150
 	progress_bar.max_value = timer.wait_time
 	timer.connect("timeout", self, "_on_Timer_timeout")
 	timer.start()

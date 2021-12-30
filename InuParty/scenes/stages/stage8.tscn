@@ -210,6 +210,7 @@ position = Vector2( 16, -48 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 104, 680 )
+scale = Vector2( 900, 1 )
 shape = SubResource( 4 )
 
 [node name="Musica" parent="." instance=ExtResource( 12 )]
